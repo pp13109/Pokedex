@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { PokemonListItem } from "@/features/pokemon/types/pokemon-list-item";
 
@@ -17,8 +18,21 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
             {pokemon.name}
           </h2>
         </div>
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-800 text-sm font-bold text-zinc-300">
-          {pokemon.name.slice(0, 2).toUpperCase()}
+
+        <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-zinc-800/80">
+          {pokemon.imageUrl ? (
+            <Image
+              src={pokemon.imageUrl}
+              alt={pokemon.name}
+              fill
+              sizes="80px"
+              className="object-contain p-2"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center text-sm font-bold text-zinc-300">
+              {pokemon.name.slice(0, 2).toUpperCase()}
+            </div>
+          )}
         </div>
       </div>
 
