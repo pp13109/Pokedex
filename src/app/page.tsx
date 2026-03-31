@@ -1,15 +1,103 @@
-import { PokedexClient } from "@/features/pokemon/components/pokedex-client";
-import { getPokemonList } from "@/features/pokemon/server/pokemon-service";
+import { PokedexSearchForm } from "@/features/pokemon/components/pokedex-search-form";
+import { PokemonGrid } from "@/features/pokemon/components/pokemon-grid";
+import { PokemonPagination } from "@/features/pokemon/components/pokemon-pagination";
+import {
+  DEFAULT_PAGE_SIZE,
+  getPokemonList,
+  searchPokemonListItemByName,
+} from "@/features/pokemon/server/pokemon-service";
 
-export default async function Home() {
+type HomePageProps = {
+  searchParams: Promise<{
+    page?: string | string[];
+    query?: string | string[];
+  }>;
+};
+
+function getSingleSearchParam(value: string | string[] | undefined) {
+  if (Array.isArray(value)) {
+    return value[0] ?? "";
+  }
+
+  return value ?? "";
+}
+
+function parsePage(value: string) {
+  const parsedValue = Number(value);
+
+  if (!Number.isInteger(parsedValue) || parsedValue < 1) {
+    return 1;
+  }
+
+  return parsedValue;
+}
+
+export default async function Home({ searchParams }: HomePageProps) {
+  const resolvedSearchParams = await searchParams;
+  const query = getSingleSearchParam(resolvedSearchParams.query).trim();
+  const requestedPage = parsePage(
+    getSingleSearchParam(resolvedSearchParams.page),
+  );
+
   try {
-    const { results } = await getPokemonList({ limit: 12 });
+    if (query) {
+      const pokemon = await searchPokemonListItemByName(query);
+      const results = pokemon ? [pokemon] : [];
+
+      return (
+        <main className="mx-auto min-h-screen max-w-6xl px-6 py-16">
+          <section className="mb-10 space-y-4">
+            <span className="inline-flex rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 text-sm text-zinc-300">
+              Fase 4 · URL-driven search and pagination
+            </span>
+
+            <div className="space-y-3">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                Pokédex
+              </h1>
+
+              <p className="max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
+                Ahora el estado importante de la home vive en la URL.
+              </p>
+            </div>
+          </section>
+
+          <div className="space-y-8">
+            <PokedexSearchForm defaultQuery={query} />
+
+            <section className="space-y-3">
+              <h2 className="text-xl font-semibold tracking-tight">
+                Resultado de búsqueda
+              </h2>
+
+              <p className="text-sm text-zinc-400">
+                Mostrando resultado para{" "}
+                <span className="font-medium text-zinc-200">{query}</span>.
+              </p>
+            </section>
+
+            <PokemonGrid
+              pokemon={results}
+              emptyMessage={`No encontramos un Pokémon con el nombre "${query}".`}
+            />
+          </div>
+        </main>
+      );
+    }
+
+    const offset = (requestedPage - 1) * DEFAULT_PAGE_SIZE;
+    const { count, results } = await getPokemonList({
+      limit: DEFAULT_PAGE_SIZE,
+      offset,
+    });
+
+    const totalPages = Math.max(1, Math.ceil(count / DEFAULT_PAGE_SIZE));
 
     return (
       <main className="mx-auto min-h-screen max-w-6xl px-6 py-16">
         <section className="mb-10 space-y-4">
           <span className="inline-flex rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 text-sm text-zinc-300">
-            Fase 3 · Real data layer
+            Fase 4 · URL-driven search and pagination
           </span>
 
           <div className="space-y-3">
@@ -18,13 +106,35 @@ export default async function Home() {
             </h1>
 
             <p className="max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
-              Ahora la aplicación consume datos reales de PokéAPI mediante una
-              capa de servidor tipada y normalizada.
+              Ahora el estado importante de la home vive en la URL.
             </p>
           </div>
         </section>
 
-        <PokedexClient initialPokemon={results} />
+        <div className="space-y-8">
+          <PokedexSearchForm defaultQuery="" />
+
+          <section className="space-y-3">
+            <h2 className="text-xl font-semibold tracking-tight">
+              Listado de Pokémon
+            </h2>
+
+            <p className="text-sm text-zinc-400">
+              Mostrando la página{" "}
+              <span className="font-medium text-zinc-200">{requestedPage}</span>{" "}
+              de <span className="font-medium text-zinc-200">{totalPages}</span>
+              .
+            </p>
+          </section>
+
+          <PokemonGrid pokemon={results} />
+
+          <PokemonPagination
+            currentPage={requestedPage}
+            totalPages={totalPages}
+            query=""
+          />
+        </div>
       </main>
     );
   } catch (error) {
