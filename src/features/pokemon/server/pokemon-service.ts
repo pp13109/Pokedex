@@ -2,13 +2,19 @@ import {
   mapPokemonToDetail,
   mapPokemonToListItem,
 } from "@/features/pokemon/server/pokemon-mappers";
-import { pokeApiFetch } from "@/features/pokemon/server/pokemon-api";
+import {
+  PokeApiNotFoundError,
+  pokeApiFetch,
+} from "@/features/pokemon/server/pokemon-api";
 import type { PokemonDetail } from "@/features/pokemon/types/pokemon-detail";
 import type {
   PokemonListResponse,
   PokemonResponse,
 } from "@/features/pokemon/types/pokemon-api";
 import type { PokemonListItem } from "@/features/pokemon/types/pokemon-list-item";
+import { unstable_cache } from "next/cache";
+
+export const DEFAULT_PAGE_SIZE = 12;
 
 export type PaginatedPokemonList = {
   count: number;
@@ -22,10 +28,50 @@ type GetPokemonListOptions = {
   offset?: number;
 };
 
+export type SearchPokemonListResult = {
+  totalMatches: number;
+  results: PokemonListItem[];
+};
+
+function normalizePokemonName(value: string) {
+  return value.trim().toLowerCase().replace(/\s+/g, "-");
+}
+
+async function getPokemonResponseByName(
+  name: string,
+): Promise<PokemonResponse> {
+  const normalizedName = normalizePokemonName(name);
+  const safeName = encodeURIComponent(normalizedName);
+
+  return pokeApiFetch<PokemonResponse>(`/pokemon/${safeName}`);
+}
+
+const getCachedPokemonNameIndex = unstable_cache(
+  async () => {
+    const metadataResponse = await pokeApiFetch<PokemonListResponse>(
+      '/pokemon?limit=1&offset=0'
+    )
+
+    const fullListResponse = await pokeApiFetch<PokemonListResponse>(
+      `/pokemon?limit=${metadataResponse.count}&offset=0`
+    )
+
+    return fullListResponse.results.map(({ name }) => name)
+  },
+  ['pokemon-name-index'],
+  {
+    revalidate: 60 * 60 * 24,
+  }
+)
+
+async function getPokemonNameIndex(): Promise<string[]> {
+  return getCachedPokemonNameIndex()
+}
+
 export async function getPokemonList(
   options: GetPokemonListOptions = {},
 ): Promise<PaginatedPokemonList> {
-  const { limit = 12, offset = 0 } = options;
+  const { limit = DEFAULT_PAGE_SIZE, offset = 0 } = options;
 
   const listResponse = await pokeApiFetch<PokemonListResponse>(
     `/pokemon?limit=${limit}&offset=${offset}`,
@@ -46,12 +92,60 @@ export async function getPokemonList(
 }
 
 export async function getPokemonByName(name: string): Promise<PokemonDetail> {
-  const normalizedName = name.trim().toLowerCase();
-  const safeName = encodeURIComponent(normalizedName);
-
-  const pokemonResponse = await pokeApiFetch<PokemonResponse>(
-    `/pokemon/${safeName}`,
-  );
+  const pokemonResponse = await getPokemonResponseByName(name);
 
   return mapPokemonToDetail(pokemonResponse);
+}
+
+export async function searchPokemonList(
+  query: string,
+  page = 1,
+  pageSize = DEFAULT_PAGE_SIZE,
+): Promise<SearchPokemonListResult> {
+  const normalizedQuery = normalizePokemonName(query);
+
+  if (!normalizedQuery) {
+    return {
+      totalMatches: 0,
+      results: [],
+    };
+  }
+
+  const pokemonNames = await getPokemonNameIndex();
+
+  const matchingNames = pokemonNames.filter((name) =>
+    name.includes(normalizedQuery),
+  );
+
+  const offset = (page - 1) * pageSize;
+  const paginatedNames = matchingNames.slice(offset, offset + pageSize);
+
+  const pokemonDetailPromises = paginatedNames.map((name) =>
+    getPokemonResponseByName(name),
+  );
+
+  const pokemonResponses = await Promise.all(pokemonDetailPromises);
+
+  return {
+    totalMatches: matchingNames.length,
+    results: pokemonResponses
+      .map(mapPokemonToListItem)
+      .sort((a, b) => a.id - b.id),
+  };
+}
+
+export async function searchPokemonListItemByName(
+  query: string,
+): Promise<PokemonListItem | null> {
+  try {
+    const pokemonResponse = await getPokemonResponseByName(query);
+
+    return mapPokemonToListItem(pokemonResponse);
+  } catch (error) {
+    if (error instanceof PokeApiNotFoundError) {
+      return null;
+    }
+
+    throw error;
+  }
 }
