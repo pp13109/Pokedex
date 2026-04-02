@@ -1,10 +1,10 @@
-import { PokedexSearchForm } from "@/features/pokemon/components/pokedex-search-form";
+import { PokedexLiveSearch } from "@/features/pokemon/components/pokedex-live-search";
 import { PokemonGrid } from "@/features/pokemon/components/pokemon-grid";
 import { PokemonPagination } from "@/features/pokemon/components/pokemon-pagination";
 import {
   DEFAULT_PAGE_SIZE,
   getPokemonList,
-  searchPokemonListItemByName,
+  searchPokemonList,
 } from "@/features/pokemon/server/pokemon-service";
 
 type HomePageProps = {
@@ -41,14 +41,22 @@ export default async function Home({ searchParams }: HomePageProps) {
 
   try {
     if (query) {
-      const pokemon = await searchPokemonListItemByName(query);
-      const results = pokemon ? [pokemon] : [];
+      const { totalMatches, results } = await searchPokemonList(
+        query,
+        requestedPage,
+        DEFAULT_PAGE_SIZE,
+      );
+
+      const totalPages = Math.max(
+        1,
+        Math.ceil(totalMatches / DEFAULT_PAGE_SIZE),
+      );
 
       return (
         <main className="mx-auto min-h-screen max-w-6xl px-6 py-16">
           <section className="mb-10 space-y-4">
             <span className="inline-flex rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 text-sm text-zinc-300">
-              Fase 4 · URL-driven search and pagination
+              Fase 4.5 · Live search
             </span>
 
             <div className="space-y-3">
@@ -57,28 +65,38 @@ export default async function Home({ searchParams }: HomePageProps) {
               </h1>
 
               <p className="max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
-                Ahora el estado importante de la home vive en la URL.
+                Búsqueda reactiva con URL y coincidencias parciales sobre toda
+                la Pokédex.
               </p>
             </div>
           </section>
 
           <div className="space-y-8">
-            <PokedexSearchForm defaultQuery={query} />
+            <PokedexLiveSearch initialQuery={query} />
 
             <section className="space-y-3">
               <h2 className="text-xl font-semibold tracking-tight">
-                Resultado de búsqueda
+                Resultados de búsqueda
               </h2>
 
               <p className="text-sm text-zinc-400">
-                Mostrando resultado para{" "}
-                <span className="font-medium text-zinc-200">{query}</span>.
+                Mostrando {results.length} resultado(s) en la página{" "}
+                <span className="font-medium text-zinc-200">
+                  {requestedPage}
+                </span>{" "}
+                para <span className="font-medium text-zinc-200">{query}</span>.
               </p>
             </section>
 
             <PokemonGrid
               pokemon={results}
-              emptyMessage={`No encontramos un Pokémon con el nombre "${query}".`}
+              emptyMessage={`No encontramos coincidencias para "${query}".`}
+            />
+
+            <PokemonPagination
+              currentPage={requestedPage}
+              totalPages={totalPages}
+              query={query}
             />
           </div>
         </main>
@@ -97,7 +115,7 @@ export default async function Home({ searchParams }: HomePageProps) {
       <main className="mx-auto min-h-screen max-w-6xl px-6 py-16">
         <section className="mb-10 space-y-4">
           <span className="inline-flex rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 text-sm text-zinc-300">
-            Fase 4 · URL-driven search and pagination
+            Fase 4.5 · Live search
           </span>
 
           <div className="space-y-3">
@@ -106,13 +124,14 @@ export default async function Home({ searchParams }: HomePageProps) {
             </h1>
 
             <p className="max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
-              Ahora el estado importante de la home vive en la URL.
+              Búsqueda reactiva con URL y coincidencias parciales sobre toda la
+              Pokédex.
             </p>
           </div>
         </section>
 
         <div className="space-y-8">
-          <PokedexSearchForm defaultQuery="" />
+          <PokedexLiveSearch initialQuery="" />
 
           <section className="space-y-3">
             <h2 className="text-xl font-semibold tracking-tight">
