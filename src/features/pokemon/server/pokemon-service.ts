@@ -12,6 +12,7 @@ import type {
   PokemonResponse,
 } from "@/features/pokemon/types/pokemon-api";
 import type { PokemonListItem } from "@/features/pokemon/types/pokemon-list-item";
+import { unstable_cache } from "next/cache";
 
 export const DEFAULT_PAGE_SIZE = 12;
 
@@ -28,30 +29,12 @@ type GetPokemonListOptions = {
 };
 
 export type SearchPokemonListResult = {
-  totalMatches: number
-  results: PokemonListItem[]
-}
+  totalMatches: number;
+  results: PokemonListItem[];
+};
 
 function normalizePokemonName(value: string) {
   return value.trim().toLowerCase().replace(/\s+/g, "-");
-}
-
-function comparePokemonNames(a: string, b: string, query: string) {
-  const aStartsWithQuery = a.startsWith(query);
-  const bStartsWithQuery = b.startsWith(query);
-
-  if (aStartsWithQuery !== bStartsWithQuery) {
-    return aStartsWithQuery ? -1 : 1;
-  }
-
-  const aMatchIndex = a.indexOf(query);
-  const bMatchIndex = b.indexOf(query);
-
-  if (aMatchIndex !== bMatchIndex) {
-    return aMatchIndex - bMatchIndex;
-  }
-
-  return a.localeCompare(b);
 }
 
 async function getPokemonResponseByName(
@@ -63,16 +46,26 @@ async function getPokemonResponseByName(
   return pokeApiFetch<PokemonResponse>(`/pokemon/${safeName}`);
 }
 
+const getCachedPokemonNameIndex = unstable_cache(
+  async () => {
+    const metadataResponse = await pokeApiFetch<PokemonListResponse>(
+      '/pokemon?limit=1&offset=0'
+    )
+
+    const fullListResponse = await pokeApiFetch<PokemonListResponse>(
+      `/pokemon?limit=${metadataResponse.count}&offset=0`
+    )
+
+    return fullListResponse.results.map(({ name }) => name)
+  },
+  ['pokemon-name-index'],
+  {
+    revalidate: 60 * 60 * 24,
+  }
+)
+
 async function getPokemonNameIndex(): Promise<string[]> {
-  const metadataResponse = await pokeApiFetch<PokemonListResponse>(
-    "/pokemon?limit=1&offset=0",
-  );
-
-  const fullListResponse = await pokeApiFetch<PokemonListResponse>(
-    `/pokemon?limit=${metadataResponse.count}&offset=0`,
-  );
-
-  return fullListResponse.results.map(({ name }) => name);
+  return getCachedPokemonNameIndex()
 }
 
 export async function getPokemonList(
@@ -107,38 +100,38 @@ export async function getPokemonByName(name: string): Promise<PokemonDetail> {
 export async function searchPokemonList(
   query: string,
   page = 1,
-  pageSize = DEFAULT_PAGE_SIZE
+  pageSize = DEFAULT_PAGE_SIZE,
 ): Promise<SearchPokemonListResult> {
-  const normalizedQuery = normalizePokemonName(query)
+  const normalizedQuery = normalizePokemonName(query);
 
   if (!normalizedQuery) {
     return {
       totalMatches: 0,
       results: [],
-    }
+    };
   }
 
-  const pokemonNames = await getPokemonNameIndex()
+  const pokemonNames = await getPokemonNameIndex();
 
   const matchingNames = pokemonNames.filter((name) =>
-    name.includes(normalizedQuery)
-  )
+    name.includes(normalizedQuery),
+  );
 
-  const offset = (page - 1) * pageSize
-  const paginatedNames = matchingNames.slice(offset, offset + pageSize)
+  const offset = (page - 1) * pageSize;
+  const paginatedNames = matchingNames.slice(offset, offset + pageSize);
 
   const pokemonDetailPromises = paginatedNames.map((name) =>
-    getPokemonResponseByName(name)
-  )
+    getPokemonResponseByName(name),
+  );
 
-  const pokemonResponses = await Promise.all(pokemonDetailPromises)
+  const pokemonResponses = await Promise.all(pokemonDetailPromises);
 
   return {
     totalMatches: matchingNames.length,
     results: pokemonResponses
       .map(mapPokemonToListItem)
       .sort((a, b) => a.id - b.id),
-  }
+  };
 }
 
 export async function searchPokemonListItemByName(
