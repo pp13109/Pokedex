@@ -1,24 +1,43 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import {
-  PokeApiNotFoundError,
-} from '@/features/pokemon/server/pokemon-api'
-import { getPokemonByName } from '@/features/pokemon/server/pokemon-service'
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { PokeApiNotFoundError } from "@/features/pokemon/server/pokemon-api";
+import { getPokemonByName } from "@/features/pokemon/server/pokemon-service";
 
 type PokemonDetailPageProps = {
   params: Promise<{
-    name: string
-  }>
+    name: string;
+  }>;
+};
+
+export async function generateMetadata({
+  params,
+}: PokemonDetailPageProps): Promise<Metadata> {
+  const { name } = await params;
+
+  try {
+    const pokemon = await getPokemonByName(name);
+
+    return {
+      title: `${pokemon.name} · Pokédex`,
+      description: `Consulta datos de ${pokemon.name}, incluyendo tipos, habilidades, altura, peso y stats base.`,
+    };
+  } catch (error) {
+    return {
+      title: "Pokémon no encontrado · Pokédex",
+      description: "No pudimos encontrar el Pokémon solicitado.",
+    };
+  }
 }
 
 export default async function PokemonDetailPage({
   params,
 }: PokemonDetailPageProps) {
-  const { name } = await params
+  const { name } = await params;
 
   try {
-    const pokemon = await getPokemonByName(name)
+    const pokemon = await getPokemonByName(name);
 
     return (
       <main className="mx-auto min-h-screen max-w-5xl px-6 py-16">
@@ -49,14 +68,17 @@ export default async function PokemonDetailPage({
           <div className="space-y-8">
             <section className="space-y-4">
               <p className="text-sm text-zinc-400">
-                #{pokemon.id.toString().padStart(4, '0')}
+                #{pokemon.id.toString().padStart(4, "0")}
               </p>
 
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
                 {pokemon.name}
               </h1>
 
-              <ul className="flex flex-wrap gap-2">
+              <ul
+                className="flex flex-wrap gap-2"
+                aria-label={`Tipos de ${pokemon.name}`}
+              >
                 {pokemon.types.map((type) => (
                   <li
                     key={type}
@@ -92,12 +114,14 @@ export default async function PokemonDetailPage({
               <ul className="grid gap-3 sm:grid-cols-2">
                 {pokemon.abilities.map((ability) => (
                   <li
-                    key={`${ability.name}-${ability.isHidden ? 'hidden' : 'normal'}`}
+                    key={`${ability.name}-${ability.isHidden ? "hidden" : "normal"}`}
                     className="rounded-2xl border border-zinc-800 bg-zinc-950/50 p-4"
                   >
                     <p className="font-medium">{ability.name}</p>
                     <p className="mt-1 text-sm text-zinc-400">
-                      {ability.isHidden ? 'Habilidad oculta' : 'Habilidad normal'}
+                      {ability.isHidden
+                        ? "Habilidad oculta"
+                        : "Habilidad normal"}
                     </p>
                   </li>
                 ))}
@@ -117,7 +141,10 @@ export default async function PokemonDetailPage({
                       <span className="text-zinc-500">{stat.value}</span>
                     </div>
 
-                    <div className="h-2 overflow-hidden rounded-full bg-zinc-800">
+                    <div
+                      className="h-2 overflow-hidden rounded-full bg-zinc-800"
+                      aria-hidden="true"
+                    >
                       <div
                         className="h-full rounded-full bg-zinc-200"
                         style={{ width: `${Math.min(stat.value, 100)}%` }}
@@ -130,12 +157,12 @@ export default async function PokemonDetailPage({
           </div>
         </article>
       </main>
-    )
+    );
   } catch (error) {
     if (error instanceof PokeApiNotFoundError) {
-      notFound()
+      notFound();
     }
 
-    throw error
+    throw error;
   }
 }

@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pokédex",
-  description: "Pokédex built with Next.js, TypeScript and PokéAPI.",
+  title: {
+    default: "Pokédex",
+    template: "%s",
+  },
+  description: "Pokédex construida con Next.js, TypeScript y PokéAPI.",
 };
 
 export default function RootLayout({
@@ -23,11 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
-    >
-      <body className="min-h-screen bg-zinc-950 text-zinc-50 antialiased">{children}</body>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="min-h-screen bg-zinc-950 text-zinc-50 antialiased">
+        {children}
+      </body>
     </html>
   );
 }

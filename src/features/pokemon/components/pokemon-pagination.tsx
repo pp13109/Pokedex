@@ -49,11 +49,15 @@ export function PokemonPagination({
           <Link
             href={createPageHref(currentPage - 1, query)}
             className="inline-flex rounded-full border border-zinc-700 px-4 py-2 text-sm text-zinc-200 transition hover:border-zinc-500"
+            aria-label={`Ir a la página ${currentPage - 1}`}
           >
             Anterior
           </Link>
         ) : (
-          <span className="inline-flex cursor-not-allowed rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-600">
+          <span
+            className="inline-flex cursor-not-allowed rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-600"
+            aria-disabled="true"
+          >
             Anterior
           </span>
         )}
@@ -62,11 +66,15 @@ export function PokemonPagination({
           <Link
             href={createPageHref(currentPage + 1, query)}
             className="inline-flex rounded-full bg-zinc-50 px-4 py-2 text-sm font-medium text-zinc-950 transition-opacity hover:opacity-90"
+            aria-label={`Ir a la página ${currentPage + 1}`}
           >
             Siguiente
           </Link>
         ) : (
-          <span className="inline-flex cursor-not-allowed rounded-full bg-zinc-800 px-4 py-2 text-sm font-medium text-zinc-500">
+          <span
+            className="inline-flex cursor-not-allowed rounded-full bg-zinc-800 px-4 py-2 text-sm font-medium text-zinc-500"
+            aria-disabled="true"
+          >
             Siguiente
           </span>
         )}
