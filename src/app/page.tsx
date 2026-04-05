@@ -54,20 +54,42 @@ export default async function Home({ searchParams }: HomePageProps) {
 
       return (
         <main className="mx-auto min-h-screen max-w-6xl px-6 py-16">
-          <section className="mb-10 space-y-4">
-            <span className="inline-flex rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 text-sm text-zinc-300">
-              Fase 4.5 · Live search
+          <section className="mb-10 space-y-6">
+            <span className="inline-flex rounded-full border border-indigo-400/20 bg-indigo-400/10 px-3 py-1 text-sm text-indigo-200">
+              Fase 6 · Visual system
             </span>
 
-            <div className="space-y-3">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                Pokédex
-              </h1>
+            <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr] lg:items-end">
+              <div className="space-y-4">
+                <h1 className="max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+                  Una Pokédex moderna, clara y pensada como producto real.
+                </h1>
 
-              <p className="max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
-                Búsqueda reactiva con URL y coincidencias parciales sobre toda
-                la Pokédex.
-              </p>
+                <p className="max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
+                  Ahora estamos fortaleciendo la identidad visual, la jerarquía
+                  de información y las microinteracciones de la interfaz.
+                </p>
+              </div>
+
+              <div className="rounded-[28px] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl">
+                <p className="text-sm text-zinc-400">Estado del proyecto</p>
+                <div className="mt-4 space-y-3">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-zinc-300">Data layer</span>
+                    <span className="font-medium text-emerald-300">Listo</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-zinc-300">Búsqueda reactiva</span>
+                    <span className="font-medium text-emerald-300">Listo</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-zinc-300">Sistema visual</span>
+                    <span className="font-medium text-indigo-300">
+                      En progreso
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -113,20 +135,42 @@ export default async function Home({ searchParams }: HomePageProps) {
 
     return (
       <main className="mx-auto min-h-screen max-w-6xl px-6 py-16">
-        <section className="mb-10 space-y-4">
-          <span className="inline-flex rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 text-sm text-zinc-300">
-            Fase 4.5 · Live search
+        <section className="mb-10 space-y-6">
+          <span className="inline-flex rounded-full border border-indigo-400/20 bg-indigo-400/10 px-3 py-1 text-sm text-indigo-200">
+            Fase 6 · Visual system
           </span>
 
-          <div className="space-y-3">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Pokédex
-            </h1>
+          <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr] lg:items-end">
+            <div className="space-y-4">
+              <h1 className="max-w-3xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Una Pokédex moderna, clara y pensada como producto real.
+              </h1>
 
-            <p className="max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
-              Búsqueda reactiva con URL y coincidencias parciales sobre toda la
-              Pokédex.
-            </p>
+              <p className="max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
+                Ahora estamos fortaleciendo la identidad visual, la jerarquía de
+                información y las microinteracciones de la interfaz.
+              </p>
+            </div>
+
+            <div className="rounded-[28px] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl">
+              <p className="text-sm text-zinc-400">Estado del proyecto</p>
+              <div className="mt-4 space-y-3">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-zinc-300">Data layer</span>
+                  <span className="font-medium text-emerald-300">Listo</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-zinc-300">Búsqueda reactiva</span>
+                  <span className="font-medium text-emerald-300">Listo</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-zinc-300">Sistema visual</span>
+                  <span className="font-medium text-indigo-300">
+                    En progreso
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

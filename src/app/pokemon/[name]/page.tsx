@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PokeApiNotFoundError } from "@/features/pokemon/server/pokemon-api";
 import { getPokemonByName } from "@/features/pokemon/server/pokemon-service";
+import { PokemonTypeBadge } from "@/features/pokemon/components/pokemon-type-badge"
 
 type PokemonDetailPageProps = {
   params: Promise<{
@@ -50,8 +51,8 @@ export default async function PokemonDetailPage({
           </Link>
         </div>
 
-        <article className="grid gap-8 rounded-3xl border border-zinc-800 bg-zinc-900/80 p-8 lg:grid-cols-[320px_1fr]">
-          <div className="rounded-3xl border border-zinc-800 bg-zinc-950/60 p-6">
+        <article className="grid gap-8 rounded-[32px] border border-white/10 bg-white/[0.045] p-8 shadow-[0_16px_40px_rgba(0,0,0,0.24)] backdrop-blur-xl lg:grid-cols-[320px_1fr]">
+          <div className="rounded-[28px] border border-white/10 bg-black/20 p-6">
             <div className="relative mx-auto h-64 w-64">
               {pokemon.imageUrl ? (
                 <Image
@@ -80,25 +81,22 @@ export default async function PokemonDetailPage({
                 aria-label={`Tipos de ${pokemon.name}`}
               >
                 {pokemon.types.map((type) => (
-                  <li
-                    key={type}
-                    className="rounded-full border border-zinc-700 px-3 py-1 text-sm text-zinc-300"
-                  >
-                    {type}
+                  <li key={type}>
+                    <PokemonTypeBadge type={type} />
                   </li>
                 ))}
               </ul>
             </section>
 
             <section className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-zinc-800 bg-zinc-950/50 p-5">
+              <div className="rounded-[24px] border border-white/10 bg-black/20 p-5">
                 <p className="text-sm text-zinc-500">Altura</p>
                 <p className="mt-2 text-2xl font-semibold">
                   {pokemon.heightMeters} m
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-zinc-800 bg-zinc-950/50 p-5">
+              <div className="rounded-[24px] border border-white/10 bg-black/20 p-5">
                 <p className="text-sm text-zinc-500">Peso</p>
                 <p className="mt-2 text-2xl font-semibold">
                   {pokemon.weightKg} kg
@@ -115,7 +113,7 @@ export default async function PokemonDetailPage({
                 {pokemon.abilities.map((ability) => (
                   <li
                     key={`${ability.name}-${ability.isHidden ? "hidden" : "normal"}`}
-                    className="rounded-2xl border border-zinc-800 bg-zinc-950/50 p-4"
+                    className="rounded-[24px] border border-white/10 bg-black/20 p-4"
                   >
                     <p className="font-medium">{ability.name}</p>
                     <p className="mt-1 text-sm text-zinc-400">
