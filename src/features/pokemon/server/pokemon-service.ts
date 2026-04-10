@@ -49,23 +49,23 @@ async function getPokemonResponseByName(
 const getCachedPokemonNameIndex = unstable_cache(
   async () => {
     const metadataResponse = await pokeApiFetch<PokemonListResponse>(
-      '/pokemon?limit=1&offset=0'
-    )
+      "/pokemon?limit=1&offset=0",
+    );
 
     const fullListResponse = await pokeApiFetch<PokemonListResponse>(
-      `/pokemon?limit=${metadataResponse.count}&offset=0`
-    )
+      `/pokemon?limit=${metadataResponse.count}&offset=0`,
+    );
 
-    return fullListResponse.results.map(({ name }) => name)
+    return fullListResponse.results.map(({ name }) => name);
   },
-  ['pokemon-name-index'],
+  ["pokemon-name-index"],
   {
     revalidate: 60 * 60 * 24,
-  }
-)
+  },
+);
 
 async function getPokemonNameIndex(): Promise<string[]> {
-  return getCachedPokemonNameIndex()
+  return getCachedPokemonNameIndex();
 }
 
 export async function getPokemonList(

@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PokeApiNotFoundError } from "@/features/pokemon/server/pokemon-api";
 import { getPokemonByName } from "@/features/pokemon/server/pokemon-service";
-import { PokemonTypeBadge } from "@/features/pokemon/components/pokemon-type-badge"
+import { PokemonTypeBadge } from "@/features/pokemon/components/pokemon-type-badge";
+import { PokemonStatsList } from "@/features/pokemon/components/pokemon-stats-list";
 
 type PokemonDetailPageProps = {
   params: Promise<{
@@ -42,17 +43,8 @@ export default async function PokemonDetailPage({
 
     return (
       <main className="mx-auto min-h-screen max-w-5xl px-6 py-16">
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="text-sm text-zinc-400 transition hover:text-zinc-200"
-          >
-            ← Volver a la Pokédex
-          </Link>
-        </div>
-
         <article className="grid gap-8 rounded-[32px] border border-white/10 bg-white/[0.045] p-8 shadow-[0_16px_40px_rgba(0,0,0,0.24)] backdrop-blur-xl lg:grid-cols-[320px_1fr]">
-          <div className="rounded-[28px] border border-white/10 bg-black/20 p-6">
+          <div className="rounded-[28px] border border-white/10 bg-black/20 p-6 flex flex-col justify-between">
             <div className="relative mx-auto h-64 w-64">
               {pokemon.imageUrl ? (
                 <Image
@@ -64,9 +56,28 @@ export default async function PokemonDetailPage({
                 />
               ) : null}
             </div>
+            <div className="relative mx-auto h-64 w-64">
+              {pokemon.imageUrlShiny ? (
+                <Image
+                  src={pokemon.imageUrlShiny}
+                  alt={`${pokemon.name} shiny`}
+                  fill
+                  sizes="256px"
+                  className="object-contain"
+                />
+              ) : null}
+            </div>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-4">
+            <div className="mb-8">
+              <Link
+                href="/"
+                className="text-sm text-zinc-400 transition hover:text-zinc-200"
+              >
+                ← Volver a la Pokédex
+              </Link>
+            </div>
             <section className="space-y-4">
               <p className="text-sm text-zinc-400">
                 #{pokemon.id.toString().padStart(4, "0")}
@@ -131,26 +142,7 @@ export default async function PokemonDetailPage({
                 Stats base
               </h2>
 
-              <ul className="space-y-3">
-                {pokemon.stats.map((stat) => (
-                  <li key={stat.name} className="space-y-1">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-zinc-300">{stat.name}</span>
-                      <span className="text-zinc-500">{stat.value}</span>
-                    </div>
-
-                    <div
-                      className="h-2 overflow-hidden rounded-full bg-zinc-800"
-                      aria-hidden="true"
-                    >
-                      <div
-                        className="h-full rounded-full bg-zinc-200"
-                        style={{ width: `${Math.min(stat.value, 100)}%` }}
-                      />
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <PokemonStatsList stats={pokemon.stats} />
             </section>
           </div>
         </article>

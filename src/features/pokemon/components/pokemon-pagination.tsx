@@ -37,7 +37,7 @@ export function PokemonPagination({
   return (
     <nav
       aria-label="Paginación de la Pokédex"
-      className="flex flex-col gap-4 rounded-3xl border border-zinc-800 bg-zinc-900/60 p-4 sm:flex-row sm:items-center sm:justify-between"
+      className="flex flex-col gap-4 rounded-[28px] border border-white/10 bg-white/[0.045] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between "
     >
       <p className="text-sm text-zinc-400">
         Página <span className="font-medium text-zinc-100">{currentPage}</span>{" "}

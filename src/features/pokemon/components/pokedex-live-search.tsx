@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { motion } from "motion/react";
 
 type PokedexLiveSearchProps = {
   initialQuery: string;
@@ -71,7 +72,13 @@ export function PokedexLiveSearch({ initialQuery }: PokedexLiveSearchProps) {
   }
 
   return (
-    <section className="rounded-[28px] border border-white/10 bg-white/[0.045] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.18)] backdrop-blur-xl">
+    <motion.section
+      layout
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      className="rounded-[28px] border border-white/10 bg-white/[0.045] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.18)] backdrop-blur-xl"
+    >
       <div className="space-y-4">
         <div className="space-y-1">
           <label
@@ -105,6 +112,6 @@ export function PokedexLiveSearch({ initialQuery }: PokedexLiveSearchProps) {
           </button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

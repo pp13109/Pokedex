@@ -31,8 +31,17 @@ export type PokemonResponse = {
   }>;
   sprites: {
     front_default: string | null;
+    front_shiny: string | null;
     other?: {
       ["official-artwork"]?: {
+        front_default: string | null;
+        front_shiny: string | null;
+      };
+      home?: {
+        front_default: string | null;
+        front_shiny: string | null;
+      };
+      dream_world?: {
         front_default: string | null;
       };
     };
