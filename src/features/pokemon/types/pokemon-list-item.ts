@@ -1,7 +1,11 @@
+import { PokemonFormType } from "./pokemon-api";
+
 export type PokemonListItem = {
   id: number;
   name: string;
-  slug: string;
+  displayName: string;
+  pokedexNumber: number;
+  forms: PokemonFormType[];
   imageUrl: string | null;
   types: string[];
 };

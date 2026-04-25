@@ -1,106 +1,126 @@
-'use client'
+"use client";
 
-import { useEffect, useRef } from 'react'
-import { usePathname, useRouter } from 'next/navigation'
+import { useEffect, useRef } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { motion } from "motion/react";
+import { CiSearch } from "react-icons/ci";
+import { IoClose } from "react-icons/io5";
 
 type PokedexLiveSearchProps = {
-  initialQuery: string
-}
+  initialQuery: string;
+};
 
-const SEARCH_DEBOUNCE_MS = 100
+const SEARCH_DEBOUNCE_MS = 300;
 
-export function PokedexLiveSearch({
-  initialQuery,
-}: PokedexLiveSearchProps) {
-  const pathname = usePathname()
-  const { replace } = useRouter()
-  const inputRef = useRef<HTMLInputElement | null>(null)
-  const timeoutRef = useRef<number | null>(null)
+export function PokedexLiveSearch({ initialQuery }: PokedexLiveSearchProps) {
+  const searchParams = useSearchParams();
+  const { replace } = useRouter();
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  const timeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const input = inputRef.current
+    const input = inputRef.current;
 
     if (!input) {
-      return
+      return;
     }
 
-    const isFocused = document.activeElement === input
+    const isFocused = document.activeElement === input;
 
-    if (!isFocused || initialQuery === '') {
-      input.value = initialQuery
+    if (!isFocused || initialQuery === "") {
+      input.value = initialQuery;
     }
-  }, [initialQuery])
+  }, [initialQuery]);
 
   useEffect(() => {
     return () => {
       if (timeoutRef.current !== null) {
-        window.clearTimeout(timeoutRef.current)
+        window.clearTimeout(timeoutRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
-  function handleChange(term: string) {
+  function handleChange(query: string) {
     if (timeoutRef.current !== null) {
-      window.clearTimeout(timeoutRef.current)
+      window.clearTimeout(timeoutRef.current);
     }
 
     timeoutRef.current = window.setTimeout(() => {
-      const normalizedTerm = term.trim()
+      const params = new URLSearchParams(searchParams.toString());
+
+      const normalizedTerm = query.trim();
 
       if (!normalizedTerm) {
-        replace(pathname, { scroll: false })
-        return
+        params.delete("query");
+        params.delete("page");
+      } else {
+        params.set("query", normalizedTerm);
+        params.set("page", "1");
       }
 
-      const params = new URLSearchParams()
-      params.set('query', normalizedTerm)
-      params.set('page', '1')
+      const search = params.toString();
 
-      replace(`${pathname}?${params.toString()}`, { scroll: false })
-    }, SEARCH_DEBOUNCE_MS)
+      replace(search ? `/?${search}` : "/", { scroll: false });
+    }, SEARCH_DEBOUNCE_MS);
   }
 
   function handleClear() {
     if (timeoutRef.current !== null) {
-      window.clearTimeout(timeoutRef.current)
+      window.clearTimeout(timeoutRef.current);
     }
 
     if (inputRef.current) {
-      inputRef.current.value = ''
+      inputRef.current.value = "";
     }
 
-    replace(pathname, { scroll: false })
+    handleChange("");
   }
 
   return (
-    <section className="space-y-3">
-      <label htmlFor="pokemon-search" className="text-sm text-zinc-300">
-        Buscar Pokémon por nombre
-      </label>
+    <motion.section
+      layout
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      className="sticky top-15 z-50 flex flex-row gap-3 items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-5 py-4 shadow-[0_12px_32px_rgba(0,0,0,0.18)] backdrop-blur-xl"
+    >
+      <CiSearch className="text-2xl text-zinc-300" />
+      <input
+        ref={inputRef}
+        id="pokemon-search"
+        type="text"
+        defaultValue={initialQuery}
+        onChange={(event) => handleChange(event.target.value)}
+        placeholder="Buscar por nombre..."
+        autoComplete="off"
+        autoCorrect="off"
+        spellCheck={false}
+        className="w-full text-zinc-100 outline-none transition duration-200 placeholder:text-zinc-500"
+      />
 
-      <div className="flex flex-col gap-3 sm:flex-row">
-        <input
-          ref={inputRef}
-          id="pokemon-search"
-          type="text"
-          defaultValue={initialQuery}
-          onChange={(event) => handleChange(event.target.value)}
-          placeholder="Ej. pika, char, mime..."
-          className="w-full rounded-2xl border border-zinc-800 bg-zinc-900 px-4 py-3 text-zinc-100 outline-none transition focus:border-zinc-600"
-        />
-
-        <button
+      {initialQuery && (
+        <motion.button
+        id="search_clear_button"
+        layout
+        initial={{
+          opacity: 0,
+          y: 5
+        }}
+        animate={{
+          opacity: 1,
+          y: 0
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "easeIn"
+        }}
           type="button"
           onClick={handleClear}
-          className="inline-flex items-center justify-center rounded-2xl border border-zinc-800 bg-zinc-900 px-5 py-3 text-sm font-medium text-zinc-100 transition hover:border-zinc-700"
+          className="cursor-pointer text-zinc-300 hover:text-zinc-500 active:text-zinc-400"
         >
-          Limpiar
-        </button>
-      </div>
-
-      <p className="text-sm text-zinc-500">
-        La búsqueda se actualiza automáticamente mientras escribes.
-      </p>
-    </section>
-  )
+          <IoClose className="text-2xl" />
+        </motion.button>
+      )}
+    </motion.section>
+  );
 }

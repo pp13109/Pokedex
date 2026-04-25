@@ -1,0 +1,2838 @@
+{
+  "vulpix-alola": {
+    "es": {
+      "genus": "Pokémon Zorro",
+      "entries": [
+        {
+          "text": "Exhala aire a -50 °C. Los ancianos de Alola también se refieren a él por su antiguo nombre: Keokeo.",
+          "version": "sun"
+        },
+        {
+          "text": "Crea cristales de hielo en el interior de los mechones de la cola. Al cepillarlo, se puede sentir cómo emana un agradable frescor.",
+          "version": "moon"
+        },
+        {
+          "text": "Su adorable apariencia incita a acariciarlo, pero un Ninetales emergerá de la nada y congelará al atrevido que ose hacerlo.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Viven en manadas y se ayudan mutuamente. Antaño, en Alola, la gente los llamaba Keokeo.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "En días calurosos crea ráfagas de hielo con sus seis colas para bajar la temperatura de su entorno.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "En días calurosos crea ráfagas de hielo con sus seis colas para bajar la temperatura de su entorno.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Congela la humedad del aire para crear pedazos de hielo que caen con todo el esplendor del polvo de diamante.",
+          "version": "sword"
+        },
+        {
+          "text": "Exhala aire a -50 °C. Se cree que su nombre antiguo, Keokeo, deriva del sonido que emite al jadear.",
+          "version": "shield"
+        },
+        {
+          "text": "Habita en las montañas de nieves perpetuas. Presumo que el fulgor y la refracción producto del gélido aliento de esta criatura subyacen al fenómeno del polvo de diamante.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "En Alola también se refieren a él por su antiguo nombre, Keokeo. Exhala aire a temperaturas inferiores a los –50 °C.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Se cree que habitaba otro entorno, pero acabó trasladándose a las montañas nevadas para eludir el territorio de otros Pokémon.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Fox Pokémon",
+      "entries": [
+        {
+          "text": "It exhales air colder than -58 degrees Fahrenheit. Elderly people in Alola call this Pokémon Keokeo.",
+          "version": "sun"
+        },
+        {
+          "text": "It can produce ice crystals from the hair on its tail. If you brush it, you'll be treated to a nice, refreshing breeze.",
+          "version": "moon"
+        },
+        {
+          "text": "If you carelessly approach it because it's cute, the boss of the pack, Ninetales, will appear and freeze you.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "They live together in a skulk, helping one another. In Alola, people notice Vulpix's frozen breath, which inspired the name Keokeo.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "In hot weather, this Pokémon makes ice shards with its six tails and sprays them around to cool itself off.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "In hot weather, this Pokémon makes ice shards with its six tails and sprays them around to cool itself off.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "It can solidify air moisture into ice. The Alolan Vulpix sheds its hair in beautiful diamond dust.",
+          "version": "sword"
+        },
+        {
+          "text": "Known as Keokeo, it exhales breath as cold as -58 degrees Fahrenheit. It was named Keokeo after the sound it makes.",
+          "version": "shield"
+        },
+        {
+          "text": "A Pokémon that lives in the snowy mountains. I believe that its frosty breath, which glitters and gleams as it freezes the air around it, is the source of the diamond dust phenomenon.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "An older name for this Pokémon is Keokeo. It exhales air colder than −58 degrees Fahrenheit.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It is said that they originally lived in a different habitat but then moved to the snowy mountains to avoid the habitats of other Pokémon.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "ninetales-alola": {
+    "es": {
+      "genus": "Pokémon Zorro",
+      "entries": [
+        {
+          "text": "Crea cristales de hielo en su pelaje que puede disparar al enemigo. Cualquiera que lo enfade acabará congelado al instante.",
+          "version": "sun"
+        },
+        {
+          "text": "Vive en montañas cubiertas de nieve y es venerado como la encarnación de una deidad. Su actitud es muy sosegada.",
+          "version": "moon"
+        },
+        {
+          "text": "La razón por la que guía a los viajeros que se pierden hasta la falda de la montaña es porque quiere que se vayan cuanto antes de su territorio.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Se muestra apacible, pero si alguien destroza su entorno o su ecosistema, es capaz de aniquilarlo sin piedad.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "En Alola es reverenciado como la encarnación de los dioses que residen en las montañas cubiertas de nieves eternas.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "En Alola es reverenciado como la encarnación de los dioses que residen en las montañas cubiertas de nieves eternas.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Sus cristales de hielo pueden repeler cualquier ataque o convertirse en afiladas lanzas capaces de atravesar la roca sólida.",
+          "version": "sword"
+        },
+        {
+          "text": "Hace mucho tiempo se creía que las deidades habitaban en la misma montaña nevada que este Pokémon, por lo que su acceso estaba prohibido.",
+          "version": "shield"
+        },
+        {
+          "text": "Habita en cumbres nevosas y sagradas. Ejerce de guía para las personas de noble corazón que se extravían en la montaña para conducirlas hasta la base de la misma.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Una deidad reside en las montañas nevadas donde habita. En la antigüedad, se le veneraba como la encarnación de dicho dios.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Vive en montañas cubiertas de nieves perpetuas y es reverenciado como la encarnación de una deidad. Se manifiesta envuelto en ventiscas.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Fox Pokémon",
+      "entries": [
+        {
+          "text": "It creates drops of ice in its coat and showers them over its enemies. Anyone who angers it will be frozen stiff in an instant.",
+          "version": "sun"
+        },
+        {
+          "text": "Possessing a calm demeanor, this Pokémon was revered as a deity incarnate before it was identified as a regional variant of Ninetales.",
+          "version": "moon"
+        },
+        {
+          "text": "The reason it guides people all the way down to the mountain's base is that it wants them to hurry up and leave.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "While it will guide travelers who get lost on a snowy mountain down to the mountain's base, it won't forgive anyone who harms nature.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "It is revered as a deity incarnate in the Alola region. It lives on mountains that are perpetually covered in snow.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "It is revered as a deity incarnate in the Alola region. It lives on mountains that are perpetually covered in snow.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "It can produce ice crystals from its fur to use for both offense and defense. The ice crystals can be hard enough to shatter rock.",
+          "version": "sword"
+        },
+        {
+          "text": "Some said that deities visited mountains where Ninetales live, so in times long past, no one was allowed to go into those mountains.",
+          "version": "shield"
+        },
+        {
+          "text": "Dwells on sacred peaks perpetually covered in snow. Said to appear to virtuous people who have lost their way on mountain paths—it then guides them back down to the mountain's base.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "A deity resides in the snowy mountains where this Pokémon lives. In ancient times, it was worshiped as that deity’s incarnation.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It lives on mountains perpetually covered in snow and is revered as a deity incarnate. It appears draped in a blizzard.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "raichu-alola": {
+    "es": {
+      "genus": "Pokémon Ratón",
+      "entries": [
+        {
+          "text": "Evoluciona a esta forma únicamente en la región de Alola. Los expertos apuntan a que el cambio se debe a la comida de la zona.",
+          "version": "sun"
+        },
+        {
+          "text": "Controla la electricidad a su antojo gracias a sus poderes psíquicos. Se sube a su propia cola y la usa para flotar en el aire.",
+          "version": "moon"
+        },
+        {
+          "text": "Si se le frotan los mofletes, despide un aroma muy dulzón. ¡Pero cuidado! También puede propinar un buen calambrazo.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Concentra poderes psíquicos en su cola para poder usarla a modo de tabla de surf y flotar por los aires.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Le encantan las tortitas que se preparan con una receta secreta de Alola. Hay quien cree que esta comida es la clave de su evolución.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Le encantan las tortitas que se preparan con una receta secreta de Alola. Hay quien cree que esta comida es la clave de su evolución.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Se cree que el clima y su alimentación en la región de Alola son el motivo por el que evoluciona a esta forma.",
+          "version": "sword"
+        },
+        {
+          "text": "Controla la electricidad a su antojo gracias a sus poderes psíquicos. Se sube a su propia cola y la usa para flotar por los aires.",
+          "version": "shield"
+        },
+        {
+          "text": "Le encantan las tortitas que se preparan con una receta secreta de Alola. Hay quien cree que esta comida es la clave de su evolución.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Si se le frotan los mofletes, despide un aroma muy dulzón. ¡Pero cuidado, porque también puede propinar un buen calambrazo!",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Mouse Pokémon",
+      "entries": [
+        {
+          "text": "It only evolves to this form in the Alola region. According to researchers, its diet is one of the causes of this change.",
+          "version": "sun"
+        },
+        {
+          "text": "It uses psychokinesis to control electricity. It hops aboard its own tail, using psychic power to lift the tail and move about while riding it.",
+          "version": "moon"
+        },
+        {
+          "text": "If you rub the sacs on its cheeks, a sweet fragrance comes wafting out. However, you'll also get a light shock!",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "It focuses its psychic energy into its tail and rides it like a surfer. If you find its motif, it means you're in the Alola region.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "It loves pancakes prepared with a secret Alolan recipe. Some wonder whether that recipe holds the key to this Pokémon's evolution.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "It loves pancakes prepared with a secret Alolan recipe. Some wonder whether that recipe holds the key to this Pokémon's evolution.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "It is believed that the climate and its diet in the Alola region are the reasons it evolved into this form.",
+          "version": "sword"
+        },
+        {
+          "text": "It uses psychokinesis to control its electricity. It rides its own tail and moves about like a surfer.",
+          "version": "shield"
+        },
+        {
+          "text": "It loves pancakes prepared with a secret Alolan recipe. Some wonder whether that recipe holds the key to this Pokémon’s evolution.",
+          "version": "scarlet"
+        },
+        {
+          "text": "If you rub the sacs on its cheeks, a sweet fragrance comes wafting out. However, you’ll also get a light shock!",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "meowth-alola": {
+    "es": {
+      "genus": "Pokémon Gato Araña",
+      "entries": [
+        {
+          "text": "El aumento de la población propició su independencia. Suelen ser astutos y muy orgullosos.",
+          "version": "sun"
+        },
+        {
+          "text": "Destaca por su gran astucia y orgullo exacerbado. Muchos coinciden en lo arduo que es tratar con él y su actitud rebelde.",
+          "version": "moon"
+        },
+        {
+          "text": "Al haber vivido en compañía de la realeza, su orgullo se ha visto acrecentado sobremanera. No obedece a quien no considera digno.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Cuando su orgullo se ve herido o se le ensucia la moneda de la frente, entra en un estado de histeria.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Su exacerbado orgullo le impide hacer caso de las órdenes que no le convencen, por lo que resulta un Pokémon bastante difícil de criar.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Su exacerbado orgullo le impide hacer caso de las órdenes que no le convencen, por lo que resulta un Pokémon bastante difícil de criar.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Destaca por su gran astucia y orgullo exacerbado. Muchos coinciden en lo arduo que es tratar con él y su actitud rebelde.",
+          "version": "sword"
+        },
+        {
+          "text": "Al haber vivido en compañía de la realeza de Alola, su orgullo se ha visto acrecentado y no obedece a quien no considera digno.",
+          "version": "shield"
+        },
+        {
+          "text": "Cuando su orgullo se ve herido o se le ensucia la moneda de la frente, entra en un estado de histeria.",
+          "version": "scarlet"
+        },
+        {
+          "text": "El aumento de la población propició su independencia. Suelen ser astutos y muy orgullosos.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Scratch Cat Pokémon",
+      "entries": [
+        {
+          "text": "This Pokémon was not originally found in Alola. Human actions caused a surge in their numbers, and they went feral. They're prideful and crafty.",
+          "version": "sun"
+        },
+        {
+          "text": "It's highly intelligent and prideful. It's famous for being very difficult to tame, as it will often disobey its Trainer.",
+          "version": "moon"
+        },
+        {
+          "text": "A royal line of Alola used them as their partners. Due to this, these Meowth became prideful, and they'll never obey a Trainer they don't like.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "When its pride is wounded, or when the gold coin on its forehead gets dirty, it flies into a hysterical rage.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "It is deeply prideful and will never listen to a Trainer who gives it orders it doesn't like. It's famous for being very difficult to tame.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "It is deeply prideful and will never listen to a Trainer who gives it orders it doesn't like. It's famous for being very difficult to tame.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "It's highly intelligent and prideful. It's famous for being very difficult to tame, as it will often disobey its Trainer.",
+          "version": "sword"
+        },
+        {
+          "text": "A royal line of Alola used them as their partners. Due to this, these Meowth became prideful, and they'll never obey a Trainer they don't like.",
+          "version": "shield"
+        },
+        {
+          "text": "When its pride is wounded, or when the gold coin on its forehead gets dirty, it flies into a hysterical rage.",
+          "version": "scarlet"
+        },
+        {
+          "text": "This Pokémon was not originally found in Alola. Human actions caused a surge in their numbers, and they went feral. They’re prideful and crafty.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "persian-alola": {
+    "es": {
+      "genus": "Pokémon Gato Fino",
+      "entries": [
+        {
+          "text": "Su cara redonda es un símbolo de riqueza. Es un Pokémon bellísimo al que se le han de procurar unos cuidados muy exigentes.",
+          "version": "sun"
+        },
+        {
+          "text": "Goza de una gran inteligencia, que le permite tener en poca estima a los demás. Rara vez se encariña de su Entrenador.",
+          "version": "moon"
+        },
+        {
+          "text": "De naturaleza arrogante, para ganarse su confianza y respeto es fundamental colmarlo de atenciones, pero cuidando de no mimarlo en exceso.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "A su bellísimo pelaje de excelente calidad se debe que el Persian de Alola no deje a nadie indiferente.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Su redondeado rostro denota su excelente linaje y atrae a los habitantes de Alola. Es de una belleza sin parangón.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Su redondeado rostro denota su excelente linaje y atrae a los habitantes de Alola. Es de una belleza sin parangón.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Acostumbrado a vivir en la opulencia y poseedor de un desmedido orgullo, odia con todas sus fuerzas ensuciarse.",
+          "version": "sword"
+        },
+        {
+          "text": "Hace gala de técnicas poco convencionales, como pillar a los rivales desprevenidos o atacarlos por la espalda, a fin de no ensuciar su pelaje.",
+          "version": "shield"
+        },
+        {
+          "text": "Goza de una gran inteligencia, que le permite tener en poca estima a los demás. Rara vez se encariña de su Entrenador.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Su cara redonda es un símbolo de riqueza. Es un Pokémon bellísimo al que se le han de procurar unos cuidados muy exigentes.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Class Cat Pokémon",
+      "entries": [
+        {
+          "text": "Its round face and smooth coat—softer than the most high-class velvet—have made this a very popular Pokémon in Alola.",
+          "version": "sun"
+        },
+        {
+          "text": "It looks down on everyone other than itself. Its preferred tactics are sucker punches and blindside attacks.",
+          "version": "moon"
+        },
+        {
+          "text": "In contrast to its lovely face, it's so brutal that it tortures its weakened prey rather than finishing them off.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "It's very haughty. If you don't treat it to the highest pedigree of Pokémon food, it will just turn up its nose.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Its round face is a symbol of wealth, and it's highly popular in Alola. Truly a magnificent Pokémon.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Its round face is a symbol of wealth, and it's highly popular in Alola. Truly a magnificent Pokémon.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "These Pokémon were so exceptionally pampered that their demeanor changed. They're extremely haughty and are hard to tame.",
+          "version": "sword"
+        },
+        {
+          "text": "It generally favors cowardly tactics. Even its gorgeous coat will be ruined if it's forced into a difficult battle.",
+          "version": "shield"
+        },
+        {
+          "text": "It looks down on everyone other than itself. Its preferred tactics are sucker punches and blindside attacks.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Its round face and smooth coat—softer than the most high-class velvet—have made this a very popular Pokémon in Alola.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "diglett-alola": {
+    "es": {
+      "genus": "Pokémon Topo",
+      "entries": [
+        {
+          "text": "Habita en las inmediaciones de los volcanes. Las finas barbas que se le han desarrollado en la cabeza tienen aspecto de pelo metálico.",
+          "version": "sun"
+        },
+        {
+          "text": "El color de su barba indica su estado de ánimo. Si están rígidas es señal de enojo y si están oscilantes, de alerta.",
+          "version": "moon"
+        },
+        {
+          "text": "Estos bigotes de aspecto ralo son un componente metálico maleable al par que resistente, capaz de doblegarse sin romperse.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Los finos bigotes le sirven de sensores que barren los alrededores e identifican lo que pasa sin tener que sacar la cara a la superficie.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "El entorno volcánico ha obrado cambios en él. En la cabeza lucen finas barbas de un metal tan duro como maleable.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "El entorno volcánico ha obrado cambios en él. En la cabeza lucen finas barbas de un metal tan duro como maleable.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Usa el apéndice de su cabeza con forma de pelo dorado a modo de sensor y lo saca de la tierra para comprobar qué ocurre a su alrededor.",
+          "version": "sword"
+        },
+        {
+          "text": "Dado que su zona del subsuelo puede extenderse varios metros a la redonda, resulta perjudicial para los campos de cultivo.",
+          "version": "shield"
+        },
+        {
+          "text": "El color de su barba indica su estado de ánimo. Si están rígidas es señal de enojo y si están oscilantes, de alerta.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Habita en las inmediaciones de los volcanes. Las finas barbas que se le han desarrollado en la cabeza tienen aspecto de pelo metálico.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Mole Pokémon",
+      "entries": [
+        {
+          "text": "Its head sports an altered form of whiskers that are made of metal. When in communication with its comrades, its whiskers wobble to and fro.",
+          "version": "sun"
+        },
+        {
+          "text": "The metal-rich geology of this Pokémon's habitat caused it to develop steel whiskers on its head.",
+          "version": "moon"
+        },
+        {
+          "text": "Its golden hairs function as sensors. It pokes them out of its burrow to monitor its surroundings.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "It can be found near volcanoes. It uses its metal whiskers to sense the temperature and moisture of its surroundings.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "The volcanic soil of its environment caused changes in this Pokémon. The fine hairs on its head are both flexible and as hard as iron.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "The volcanic soil of its environment caused changes in this Pokémon. The fine hairs on its head are both flexible and as hard as iron.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "The hair on its head is highly flexible and harder than iron. It functions as a sensor.",
+          "version": "sword"
+        },
+        {
+          "text": "They eat the roots of plants, which can be an annoyance for farmers. However, the soil they leave behind is rich and well tilled.",
+          "version": "shield"
+        },
+        {
+          "text": "The metal-rich geology of this Pokémon's habitat caused it to develop steel whiskers on its head.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Its head sports an altered form of whiskers that are made of metal. When in communication with its comrades, its whiskers wobble to and fro.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "dugtrio-alola": {
+    "es": {
+      "genus": "Pokémon Topo",
+      "entries": [
+        {
+          "text": "Sus barbas metálicas crecen a ritmo incesante mientras tienen vida y conforman unos cabellos duros a la par que flexibles.",
+          "version": "sun"
+        },
+        {
+          "text": "En la región de Alola se le conoce y respeta como el dios protector del suelo. Rara vez aflora a la superficie.",
+          "version": "moon"
+        },
+        {
+          "text": "El resplandor metálico de su rubio tupé cautivó el corazón de una miríada de personas, incluso al punto de erigir su propio festival.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Llevarse su cabellera dorada, por mucho que esta haya caído de forma natural del cuerpo del Pokémon, atrae la desgracia a los ladrones.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Tienen tres cabezas, y de cada una de ellas pende una barba de un metal rígido y maleable que va creciendo durante toda su vida.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Tienen tres cabezas, y de cada una de ellas pende una barba de un metal rígido y maleable que va creciendo durante toda su vida.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "El reluciente pelo que le crece en la cabeza no es sino una variante de pelo facial tan duro y resistente como el acero, que no se cae nunca.",
+          "version": "sword"
+        },
+        {
+          "text": "En algunas zonas existe la creencia de que asomarse para comprobar el pelo de Dugtrio de Alola acarrea infortunios y maldiciones.",
+          "version": "shield"
+        },
+        {
+          "text": "En la región de Alola se le conoce y respeta como el dios protector del suelo. Rara vez aflora a la superficie.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Sus barbas metálicas crecen a ritmo incesante mientras tienen vida y conforman unos cabellos duros a la par que flexibles.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Mole Pokémon",
+      "entries": [
+        {
+          "text": "Its shining gold hair provides it with protection. It's reputed that keeping any of its fallen hairs will bring bad luck.",
+          "version": "sun"
+        },
+        {
+          "text": "These Pokémon are cherished in the Alola region, where they are thought to be the incarnations of gods of the land.",
+          "version": "moon"
+        },
+        {
+          "text": "They're revered in the Alola region, where they're known as the deities of the earth.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Its brilliant, heavy, and hard hair is a type of metallic whisker. Its hair grows slowly but steadily throughout its life.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Each of its three heads has tough but flexible metal whiskers. These whiskers keep growing steadily as long as the Pokémon lives.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Each of its three heads has tough but flexible metal whiskers. These whiskers keep growing steadily as long as the Pokémon lives.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Its metallic whiskers are heavy, so it's not very fast, but it has the power to dig through the hardest of bedrock.",
+          "version": "sword"
+        },
+        {
+          "text": "Its golden hairs function as sensors. It pokes them out of its burrow to monitor its surroundings.",
+          "version": "shield"
+        },
+        {
+          "text": "These Pokémon are cherished in the Alola region, where they are thought to be the incarnations of gods of the land.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Its shining gold hair provides it with protection. It's reputed that keeping any of its fallen hairs will bring bad luck.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "geodude-alola": {
+    "es": {
+      "genus": "Pokémon Roca",
+      "entries": [
+        {
+          "text": "Su cuerpo es magnético. Sus extremidades recubiertas de limadura de hierro actúan a modo de amortiguador si un enemigo lo golpea.",
+          "version": "sun"
+        },
+        {
+          "text": "Si se le pisa sin querer, emite una descarga a modo de advertencia y puede que propine además un cabezazo enfurecido.",
+          "version": "moon"
+        },
+        {
+          "text": "Suelen competir entre ellos pegando un choque de cabezas en los que el ganador es el individuo que resulte magnéticamente más fuerte.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Si alguien pisa por accidente un Geodude de Alola adormecido en un camino montañoso, oirá crujidos repentinos y se llevará una sacudida.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "El magnetismo de su cuerpo imanta la arena ferrosa. Al atacarlo, esta arena lo defiende amortiguando el impacto.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "El magnetismo de su cuerpo imanta la arena ferrosa. Al atacarlo, esta arena lo defiende amortiguando el impacto.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Si se le pisa sin querer, emite una descarga a modo de advertencia y puede que propine además un cabezazo enfurecido.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Su cuerpo es magnético. Sus extremidades recubiertas de limadura de hierro actúan a modo de amortiguador si un enemigo lo golpea.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Rock Pokémon",
+      "entries": [
+        {
+          "text": "Its body is a magnetic stone. Iron sand attaches firmly to the portions of its body that are particularly magnetic.",
+          "version": "sun"
+        },
+        {
+          "text": "If you accidentally step on one, you'll get a shock, and it will get angry and headbutt you.",
+          "version": "moon"
+        },
+        {
+          "text": "If you accidentally step on a Geodude sleeping on the ground, you'll hear a crunching sound and feel a shock vibrate through your whole body.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "These Geodude use headbutts to compete with each other. Whoever has the strongest magnetism is the boss.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Its body is heavily magnetic. If you strike it, iron sand falls off it to cushion the blow.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Its body is heavily magnetic. If you strike it, iron sand falls off it to cushion the blow.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "If you accidentally step on one, you'll get a shock, and it will get angry and headbutt you.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Its body is a magnetic stone. Iron sand attaches firmly to the portions of its body that are particularly magnetic.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "graveler-alola": {
+    "es": {
+      "genus": "Pokémon Roca",
+      "entries": [
+        {
+          "text": "De todos es sabido que su cuerpo se compone de materiales rocosos con propiedades magnéticas y piroeléctricas.",
+          "version": "sun"
+        },
+        {
+          "text": "Se alimenta de la magnetita esparcida por los montes. A la hora de enfrentarse a los enemigos con los que se topa, les lanza rocas eléctricas.",
+          "version": "moon"
+        },
+        {
+          "text": "Acostumbran a enzarzarse en choques de cabezas, acompañados de grandes destellos y ruido de relámpagos a cada impacto.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Desciende rodando por estrechas laderas. A su paso, las chispas que liberan sus rocas le dan la apariencia de un relámpago con piernas.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Su comida favorita es la dravita, que se zampa aderezada con arena de hierro. Esto provoca la emisión de chispas por todo su cuerpo.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Su comida favorita es la dravita, que se zampa aderezada con arena de hierro. Esto provoca la emisión de chispas por todo su cuerpo.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Se alimenta de la magnetita esparcida por los montes. A la hora de enfrentarse a los enemigos con los que se topa, les lanza rocas eléctricas.",
+          "version": "scarlet"
+        },
+        {
+          "text": "De todos es sabido que su cuerpo se compone de materiales rocosos con propiedades magnéticas y piroeléctricas.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Rock Pokémon",
+      "entries": [
+        {
+          "text": "Its preferred food is dravite. After it has eaten this mineral, crystals form inside the Pokémon, rising to the surface of part of its body.",
+          "version": "sun"
+        },
+        {
+          "text": "They eat rocks and often get into a scrap over them. The shock of Graveler smashing together causes a flash of light and a booming noise.",
+          "version": "moon"
+        },
+        {
+          "text": "When two Graveler fight each other, it fills the surroundings with flashes of light and sound. People call it the “fireworks of the earth.”",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "It rolls down mountain paths, releasing electrical sparks. If it rolls into something, the electrical shock will be more powerful.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Its favorite food is dravite, which it crunches up along with iron sand. If you touch it, you'll be treated to a nasty shock.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Its favorite food is dravite, which it crunches up along with iron sand. If you touch it, you'll be treated to a nasty shock.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "They eat rocks and often get into a scrap over them. The shock of Graveler smashing together causes a flash of light and a booming noise.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Its preferred food is dravite. After it has eaten this mineral, crystals form inside the Pokémon, rising to the surface of part of its body.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "golem-alola": {
+    "es": {
+      "genus": "Pokémon Megatón",
+      "entries": [
+        {
+          "text": "Dispara rocas cargadas de electricidad. Un rasguño con alguna de ellas basta para quedarse totalmente entumecido y perder el conocimiento.",
+          "version": "sun"
+        },
+        {
+          "text": "Por el aspecto rechoncho y las púas rocosas no resulta difícil imaginar el peligro que reviste cruzarse con un Golem de Alola testarudo.",
+          "version": "moon"
+        },
+        {
+          "text": "Este Pokémon es muy irascible. Las rocas que emite por la parte superior retumban con furia.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Lanza por los aires rocas con fuertes cargas magnéticas. Quien tiene la desgracia de ser blanco de sus ataques no suele vivir para contarlo.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Se vale del magnetismo para disparar con fuerza descomunal las rocas cubiertas de energía eléctrica y arena de hierro que genera.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Se vale del magnetismo para disparar con fuerza descomunal las rocas cubiertas de energía eléctrica y arena de hierro que genera.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Por el aspecto rechoncho y las púas rocosas no resulta difícil imaginar el peligro que reviste cruzarse con un Golem de Alola testarudo.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Dispara rocas cargadas de electricidad. Un rasguño con alguna de ellas basta para quedarse totalmente entumecido y perder el conocimiento.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Megaton Pokémon",
+      "entries": [
+        {
+          "text": "It fires rocks charged with electricity. Even if the rock isn't fired that accurately, just grazing an opponent will cause numbness and fainting.",
+          "version": "sun"
+        },
+        {
+          "text": "Because it can't shoot boulders at a rapid pace, it's been known to seize nearby Geodude and fire them from its back.",
+          "version": "moon"
+        },
+        {
+          "text": "It's grumpy and stubborn. If you upset it, it discharges electricity from the surface of its body and growls with a voice like thunder.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "It shoots large rocks that are heavily charged with electricity. Tremendous electric shocks are sent out across the whole area of impact.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "It uses magnetism to accelerate and fire off rocks electrically charged with iron sand. Even if it doesn't hit directly, the enemy will be stunned.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "It uses magnetism to accelerate and fire off rocks electrically charged with iron sand. Even if it doesn't hit directly, the enemy will be stunned.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Because it can't shoot boulders at a rapid pace, it's been known to seize nearby Geodude and fire them from its back.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It fires rocks charged with electricity. Even if the rock isn't fired that accurately, just grazing an opponent will cause numbness and fainting.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "grimer-alola": {
+    "es": {
+      "genus": "Pokémon Lodo",
+      "entries": [
+        {
+          "text": "La constante ingesta de basura ha provocado alteraciones en su organismo. Ha cristalizado las toxinas de su cuerpo en una especie de colmillos.",
+          "version": "sun"
+        },
+        {
+          "text": "Este devorador de basura fue la solución que importó Alola para acabar con el problema de la excesiva acumulación de desperdicios.",
+          "version": "moon"
+        },
+        {
+          "text": "A la par que devora grandes dosis de basura, su cuerpo genera toxinas que se materializan en unos cristales tan mortíferos como un colmillo.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "En la planta de tratamiento de residuos de Alola habitan un centenar de ellos que no dan abasto ingiriendo la basura que genera la región.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Llevado a Alola en un principio para atajar el problema de los residuos urbanos. Convierte los que come en toxinas letales.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Llevado a Alola en un principio para atajar el problema de los residuos urbanos. Convierte los que come en toxinas letales.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Este devorador de basura fue la solución que importó Alola para acabar con el problema de la excesiva acumulación de desperdicios.",
+          "version": "scarlet"
+        },
+        {
+          "text": "La constante ingesta de basura ha provocado alteraciones en su organismo. Ha cristalizado las toxinas de su cuerpo en una especie de colmillos.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Sludge Pokémon",
+      "entries": [
+        {
+          "text": "Brought to Alola to solve the garbage problem, Grimer seems to relish any and all kinds of trash.",
+          "version": "sun"
+        },
+        {
+          "text": "The crystals on Grimer's body are lumps of toxins. If one falls off, lethal poisons leak out.",
+          "version": "moon"
+        },
+        {
+          "text": "It has a passion for trash, which it digests to create toxins. These toxins crystallize and form the teeth-like shards on its body.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "There are a hundred or so of them living in Alola's waste-disposal site. They're hard workers who eat up a lot of garbage.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "It was brought in to solve the garbage problem in Alola. It digests trash and produces toxins as a byproduct.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "It was brought in to solve the garbage problem in Alola. It digests trash and produces toxins as a byproduct.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "The crystals on Grimer's body are lumps of toxins. If one falls off, lethal poison leaks out.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Brought to Alola to solve the garbage problem, Grimer seems to relish any and all kinds of trash.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "muk-alola": {
+    "es": {
+      "genus": "Pokémon Lodo",
+      "entries": [
+        {
+          "text": "El sinfín de desperdicios que ha tragado ha desencadenado en su interior todo un arsenal de reacciones químicas causantes de sus colores.",
+          "version": "sun"
+        },
+        {
+          "text": "A pesar de su docilidad, si pasa hambre es capaz de arrasar y engullir por completo el mobiliario de la casa de su Entrenador.",
+          "version": "moon"
+        },
+        {
+          "text": "Ese caleidoscopio de vivos colores denota en realidad su mortífero veneno. Si te toca, corres el riesgo de caer gravemente enfermo.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Los cristales de veneno solidificado se aferran a su cuerpo a la perfección. Si tratan de arrancárselos, rociará al enemigo de veneno letal.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Lo que parece una bella amalgama de colores es en realidad una mezcla letal de sustancias, con más de cien tipos distintos de toxinas.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Lo que parece una bella amalgama de colores es en realidad una mezcla letal de sustancias, con más de cien tipos distintos de toxinas.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "A pesar de su docilidad, si pasa hambre es capaz de arrasar y engullir por completo el mobiliario de la casa de su Entrenador.",
+          "version": "scarlet"
+        },
+        {
+          "text": "El sinfín de desperdicios que ha tragado ha desencadenado en su interior todo un arsenal de reacciones químicas causantes de sus colores.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Sludge Pokémon",
+      "entries": [
+        {
+          "text": "The garbage it eats causes continuous chemical changes in its body, which produce its exceedingly poisonous coloration.",
+          "version": "sun"
+        },
+        {
+          "text": "While it's unexpectedly quiet and friendly, if it's not fed any trash for a while, it will smash its Trainer's furnishings and eat up the fragments.",
+          "version": "moon"
+        },
+        {
+          "text": "Its seemingly striking coloration is actually a warning of its high toxicity. If it touches you, you will contract a fever or something worse.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "The toxic crystals on its body are completely unremovable. If you force one loose, you'll be drenched in toxic sludge.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "What looks like a beautiful array of colors is actually a lethal chemical reaction. It has over a hundred different kinds of poison inside it.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "What looks like a beautiful array of colors is actually a lethal chemical reaction. It has over a hundred different kinds of poison inside it.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "While it's unexpectedly quiet and friendly, if it's not fed any trash for a while, it will smash its Trainer's furnishings and eat up the fragments.",
+          "version": "scarlet"
+        },
+        {
+          "text": "The garbage it eats causes continuous chemical changes in its body, which produce its exceedingly poisonous coloration.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "exeggutor-alola": {
+    "es": {
+      "genus": "Pokémon Coco",
+      "entries": [
+        {
+          "text": "El hábitat privilegiado de Alola le ha brindado esta forma, a la que los oriundos de la región consideran la más adecuada.",
+          "version": "sun"
+        },
+        {
+          "text": "Al crecer hacia lo alto, sus poderes psíquicos se han atenuado. A cambio, ha despertado en él una gran energía dragontina.",
+          "version": "moon"
+        },
+        {
+          "text": "Es el orgullo de los habitantes de Alola. Se pueden encontrar grabados con su forma en murales y edificios históricos.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Usa su largo cuello como látigo para sacudir testarazos al enemigo. El problema es que a veces acaba mareándose un poco.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Exeggutor puede crecer hasta medir más de 10 metros en Alola debido a los potentes rayos del sol de esta región.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Exeggutor puede crecer hasta medir más de 10 metros en Alola debido a los potentes rayos del sol de esta región.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Al crecer hacia lo alto, sus poderes psíquicos se han atenuado. A cambio, ha despertado en él una gran energía dragontina.",
+          "version": "scarlet"
+        },
+        {
+          "text": "El hábitat privilegiado de Alola le ha brindado esta forma, a la que los oriundos de la región consideran la más adecuada.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Coconut Pokémon",
+      "entries": [
+        {
+          "text": "Alola is the best environment for this Pokémon. Local people take pride in its appearance, saying this is how Exeggutor ought to look.",
+          "version": "sun"
+        },
+        {
+          "text": "As it grew taller and taller, it outgrew its reliance on psychic powers, while within it awakened the power of the sleeping dragon.",
+          "version": "moon"
+        },
+        {
+          "text": "It is the pride of Alolans. Its image is carved into historical buildings and murals.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "It swings its long neck like a whip and smacks its head into opponents. This makes Exeggutor itself a little dizzy, too.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "The power of the Alola region's strong sunlight causes Exeggutor to stretch its neck out to almost 36 feet.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "The power of the Alola region's strong sunlight causes Exeggutor to stretch its neck out to almost 36 feet.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "As it grew taller and taller, it outgrew its reliance on psychic powers, while within it awakened the power of the sleeping dragon.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Alola is the best environment for this Pokémon. Local people take pride in its appearance, saying this is how Exeggutor ought to look.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "marowak-alola": {
+    "es": {
+      "genus": "Pokémon Apilahueso",
+      "entries": [
+        {
+          "text": "El espíritu de su difunta madre se manifiesta en el hueso que empuña en forma de un fuego vengativo que se nutre del dolor que este alberga.",
+          "version": "sun"
+        },
+        {
+          "text": "Al golpear a un rival, las llamas de su hueso se propagan a este y prenden fuego. Ni la mayor de las trombas de agua podrá apagarlo.",
+          "version": "moon"
+        },
+        {
+          "text": "Esta noche también bailará para lamentar la muerte de sus congéneres y dedicará ese fuego a su querida y difunta madre.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "El fuego maldito que despide por el hueso le inflige no solo un gran dolor físico, sino que también lo maldice e incapacita.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Lanza su hueso como si de un bumerán se tratara, dejando un halo de fuego maldito imposible de extinguir.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Lanza su hueso como si de un bumerán se tratara, dejando un halo de fuego maldito imposible de extinguir.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "El fuego maldito que despide por el hueso inflige no solo un gran dolor físico a sus enemigos, sino que también los maldice y atormenta.",
+          "version": "sword"
+        },
+        {
+          "text": "Esta noche también bailará para lamentar la muerte de sus congéneres y dedicará ese fuego a su querida y difunta madre.",
+          "version": "shield"
+        },
+        {
+          "text": "Este Pokémon se dedica a recoger huesos. Suelen organizarse enfrentamientos entre los Marowak de Alola y los Marowak de otras regiones.",
+          "version": "scarlet"
+        },
+        {
+          "text": "El hueso en llamas de Marowak se ha usado desde la antigüedad para enviar mensajes a sus congéneres, como si se tratara de antorchas.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Bone Keeper Pokémon",
+      "entries": [
+        {
+          "text": "The bones it possesses were once its mother's. Its mother's regrets have become like a vengeful spirit protecting this Pokémon.",
+          "version": "sun"
+        },
+        {
+          "text": "When it beats opponents with its bone, the cursed flames spread to them. No amount of water will stop those flames from burning.",
+          "version": "moon"
+        },
+        {
+          "text": "It has transformed the spirit of its dear departed mother into flames, and tonight it will once again dance in mourning of others of its kind.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "The cursed flames that light up the bone it carries cause both mental and physical pain that will never fade.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "It throws its bone like a boomerang to take out targets. The cursed flames that trail behind the bone never go out.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "It throws its bone like a boomerang to take out targets. The cursed flames that trail behind the bone never go out.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "The cursed flames that light up the bone it carries cause both mental and physical pain that will never fade.",
+          "version": "sword"
+        },
+        {
+          "text": "It has transformed the spirit of its dear departed mother into flames, and tonight it will once again dance in mourning of others of its kind.",
+          "version": "shield"
+        },
+        {
+          "text": "This Pokémon gathers bones. It's common to see Alolan Marowak and Marowak from other regions brawling with each other.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Alolan Marowak's flaming bone has been used as a torch since ancient times to send signals to the Pokémon's allies.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "rattata-alola": {
+    "es": {
+      "genus": "Pokémon Ratón",
+      "entries": [
+        {
+          "text": "Comienza su actividad cuando se pone el sol. Recorre la ciudad en pos de buena comida para su jefe, que suele ser un Raticate.",
+          "version": "sun"
+        },
+        {
+          "text": "Solo muestra interés por los productos más frescos, lo que lo convierte en un valioso aliado a la hora de hacer la compra.",
+          "version": "moon"
+        },
+        {
+          "text": "La alteración de su forma se debe a que su hábitat cambió cuando se introdujo a los Yungoos, que a su vez se importaron para controlar su población.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Siempre es un Raticate quien domina el grupo. Si los nidos cuentan con buena comida es porque los Rattata no paran de faenar.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Esta raza se desenvuelve de noche y reside en zonas urbanas. Un Raticate comanda y dirige a grupos de docenas de Rattata.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Esta raza se desenvuelve de noche y reside en zonas urbanas. Un Raticate comanda y dirige a grupos de docenas de Rattata.",
+          "version": "lets-go-eevee"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Mouse Pokémon",
+      "entries": [
+        {
+          "text": "With its core population decimated by Yungoos, it went into hiding under the cover of darkness, leading to its changed form.",
+          "version": "sun"
+        },
+        {
+          "text": "Night after night, they sneak into people's homes seeking food. A massive outbreak of them has become an issue of public concern.",
+          "version": "moon"
+        },
+        {
+          "text": "It gathers food for its boss, Raticate. It just generally wanders around constantly, whether it's searching for food or simply scoping out the area.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Its condition was altered when it fell prey to Yungoos. To hide from them, it began to live in dark places, and eventually became a Dark type.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "This Pokémon is nocturnal and lives in urban areas. A Raticate leads a group of dozens of these Rattata.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "This Pokémon is nocturnal and lives in urban areas. A Raticate leads a group of dozens of these Rattata.",
+          "version": "lets-go-eevee"
+        }
+      ]
+    }
+  },
+  "raticate-alola": {
+    "es": {
+      "genus": "Pokémon Ratón",
+      "entries": [
+        {
+          "text": "Cuentan con un grupo de Rattata a sus órdenes que les buscan provisiones mientras ellos se dedican a holgazanear y comer.",
+          "version": "sun"
+        },
+        {
+          "text": "Este Pokémon está al mando de los Rattata. Cada Raticate forma un grupo y es habitual que haya trifulcas por el territorio y la comida.",
+          "version": "moon"
+        },
+        {
+          "text": "A causa de que vive en un entorno más urbano que la especie de otras regiones, su dieta se compone de alimentos calóricos, de ahí su corpulencia.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Es de naturaleza avariciosa. Obliga a los Rattata a acumular tanta comida en su madriguera que a menudo no puede comérsela toda.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Las pequeñas membranas que tiene en las patas traseras le permiten nadar entre las islas de Alola y escapar así de sus depredadores.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Las pequeñas membranas que tiene en las patas traseras le permiten nadar entre las islas de Alola y escapar así de sus depredadores.",
+          "version": "lets-go-eevee"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Mouse Pokémon",
+      "entries": [
+        {
+          "text": "It commands a group of Rattata to gather food for it. It's so busy eating that it's always lying around.",
+          "version": "sun"
+        },
+        {
+          "text": "This Pokémon is the boss of the Rattata. Each Raticate forms its own group, and disputes over food are common.",
+          "version": "moon"
+        },
+        {
+          "text": "Because its habitat is mainly urban, its diet is much higher in calories than that of Raticate from other regions, hence its rather stout appearance.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "It has an incredibly greedy nature. Its nest is always filled with so much food that it can't eat it all.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Its hind feet are webbed, so it's a strong swimmer. It can cross the ocean to reach the other islands of Alola to escape its enemies.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Its hind feet are webbed, so it's a strong swimmer. It can cross the ocean to reach the other islands of Alola to escape its enemies.",
+          "version": "lets-go-eevee"
+        }
+      ]
+    }
+  },
+  "sandshrew-alola": {
+    "es": {
+      "genus": "Pokémon Ratón",
+      "entries": [
+        {
+          "text": "Vive en montañas nevadas. Su caparazón de acero es muy resistente, pero tiene tal dureza que no le permite enrollarse del todo.",
+          "version": "sun"
+        },
+        {
+          "text": "Un festival ancestral que se sigue celebrando en Alola consiste en hacer deslizar a un Sandshrew sobre el hielo para ver quién lo lanza más lejos.",
+          "version": "moon"
+        },
+        {
+          "text": "Cambió su hábitat a las montañas nevadas tras huir de una erupción volcánica. Su caparazón de hielo posee la dureza del acero.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "El caparazón que le cubre la espalda tiene la dureza del acero. Para proteger su vientre, la zona más vulnerable, se aferra al suelo con fuerza.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Las temperaturas de su cuerpo son tan bajas que el aire gélido que exhala al respirar se cristaliza formando polvo de diamante.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Las temperaturas de su cuerpo son tan bajas que el aire gélido que exhala al respirar se cristaliza formando polvo de diamante.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Ha desarrollado un caparazón de hielo duro como el acero para adaptarse a las montañas de nieves perpetuas donde habita.",
+          "version": "sword"
+        },
+        {
+          "text": "Vive en las montañas nevadas de una isla sureña. Si se alza una ventisca, se protege ocultándose bajo la nieve hasta que amaina el temporal.",
+          "version": "shield"
+        },
+        {
+          "text": "Vive en montañas nevadas. Su caparazón de acero es muy resistente, pero tiene tal dureza que no le permite enrollarse del todo.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Un festival ancestral que se sigue celebrando en Alola consiste en hacer deslizar a un Sandshrew sobre el hielo para ver quién lo lanza más lejos.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Mouse Pokémon",
+      "entries": [
+        {
+          "text": "It lives on snowy mountains. Its steel shell is very hard—so much so, it can't roll its body up into a ball.",
+          "version": "sun"
+        },
+        {
+          "text": "An ancient tradition of Alolan festivals, still carried on to this day, is a competition to slide Sandshrew across ice as far as one can.",
+          "version": "moon"
+        },
+        {
+          "text": "It fled a volcanic eruption and ended up moving to a snowy mountain. Its ice shell is as hard as steel.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "The skin on its back is as hard as steel. Predators go after its soft belly, so it clings to the ground desperately.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Its icy body is so cold, the surrounding air freezes when it exhales, producing diamond dust.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Its icy body is so cold, the surrounding air freezes when it exhales, producing diamond dust.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "It has adapted to a harsh, snowy environment. Its body is encased in a shell of ice that is as hard as steel.",
+          "version": "sword"
+        },
+        {
+          "text": "It lives in the snowy mountains of a southern island. When a blizzard blows up, it hides itself in the snow until the storm passes.",
+          "version": "shield"
+        },
+        {
+          "text": "It lives on snowy mountains. Its steel shell is very hard—so much so, it can't roll its body up into a ball.",
+          "version": "scarlet"
+        },
+        {
+          "text": "An ancient tradition of Alolan festivals, still carried on to this day, is a competition to slide Sandshrew across ice as far as one can.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "sandslash-alola": {
+    "es": {
+      "genus": "Pokémon Ratón",
+      "entries": [
+        {
+          "text": "Huyó a las montañas nevadas debido a las erupciones volcánicas. Tras ello, su cuerpo adquirió el color de la nieve y desarrolló púas de hielo.",
+          "version": "sun"
+        },
+        {
+          "text": "El vaho gélido que emite al respirar se condensa en finas partículas de hielo que dan lugar a un paisaje cautivador e idílico.",
+          "version": "moon"
+        },
+        {
+          "text": "Posee una inusitada agilidad gracias a sus garras y es capaz de correr velozmente patinando sobre campos nevados y superficies heladas.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "Cuando se avecina una ventisca o se presiente algún peligro, se entierra en la nieve para resguardarse dejando al descubierto las afiladas púas.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "Las afiladas púas gélidas de su cuerpo son más gruesas y de mayor tamaño que en los ejemplares de otras regiones.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "Las afiladas púas gélidas de su cuerpo son más gruesas y de mayor tamaño que en los ejemplares de otras regiones.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "Ha desarrollado púas de hielo enormes e imponentes para adaptarse al duro entorno cubierto de nieves perpetuas.",
+          "version": "sword"
+        },
+        {
+          "text": "Usa sus formidables garras para abrirse paso a través de la nieve profunda y el hielo al desplazarse.",
+          "version": "shield"
+        },
+        {
+          "text": "Huyó a las montañas nevadas debido a las erupciones volcánicas. Tras ello, su cuerpo adquirió el color de la nieve y desarrolló púas de hielo.",
+          "version": "scarlet"
+        },
+        {
+          "text": "El vaho gélido que emite al respirar se condensa en finas partículas de hielo que dan lugar a un paisaje cautivador e idílico.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Mouse Pokémon",
+      "entries": [
+        {
+          "text": "Fleeing a volcanic eruption, it settled on a snowy mountain. As it wanders the snow-covered slopes, its spikes of ice grow longer and thicker.",
+          "version": "sun"
+        },
+        {
+          "text": "It uses its large, hooked claws to cut a path through deep snow as it runs. On snowy mountains, this Sandslash is faster than any other Pokémon.",
+          "version": "moon"
+        },
+        {
+          "text": "Its claws have adapted for moving on ice. They're so strong, they can quickly carve a path through even thick ice.",
+          "version": "ultra-sun"
+        },
+        {
+          "text": "The ice covering its spines is as hard as steel. It protects itself by burying its body in the snow, leaving only its spines exposed.",
+          "version": "ultra-moon"
+        },
+        {
+          "text": "The spikes on its body are made of ice. The spikes on Alolan Sandslash are thicker and longer than those of Sandslash from other regions.",
+          "version": "lets-go-pikachu"
+        },
+        {
+          "text": "The spikes on its body are made of ice. The spikes on Alolan Sandslash are thicker and longer than those of Sandslash from other regions.",
+          "version": "lets-go-eevee"
+        },
+        {
+          "text": "This Pokémon's spikes of ice are covered in a hard shell. Sometimes it sheds its spikes, which are then used by locals to carve tools.",
+          "version": "sword"
+        },
+        {
+          "text": "It uses its formidable claws to carve paths through the deep snow and ice so that it can easily slide along.",
+          "version": "shield"
+        },
+        {
+          "text": "Fleeing a volcanic eruption, it settled on a snowy mountain. As it wanders the snow-covered slopes, its spikes of ice grow longer and thicker.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It uses its large, hooked claws to cut a path through deep snow as it runs. On snowy mountains, this Sandslash is faster than any other Pokémon.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "meowth-galar": {
+    "es": {
+      "genus": "Pokémon Gato Araña",
+      "entries": [
+        {
+          "text": "Algunas partes de su cuerpo se volvieron metálicas tras una larga convivencia con aguerrida gente del mar.",
+          "version": "sword"
+        },
+        {
+          "text": "Cuanto más oscura es la moneda de su frente, mayor respeto inspira en sus congéneres. Es muy osado y no conoce el miedo.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Scratch Cat Pokémon",
+      "entries": [
+        {
+          "text": "Living with a savage, seafaring people has toughened this Pokémon's body so much that parts of it have turned to iron.",
+          "version": "sword"
+        },
+        {
+          "text": "The darker the coin on its head, the more respect it earns from its peers. These Meowth are hardy and brave.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "ponyta-galarr": {
+    "es": {
+      "genus": "Pokémon Cuernsingular",
+      "entries": [
+        {
+          "text": "En su pequeño cuerno alberga un poder curativo con el que es capaz de sanar heridas leves frotando la zona afectada.",
+          "version": "sword"
+        },
+        {
+          "text": "Te mira a los ojos para leerte la mente. Si detecta malas intenciones, desaparecerá en un abrir y cerrar de ojos.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Unique Horn Pokémon",
+      "entries": [
+        {
+          "text": "Its small horn hides a healing power. With a few rubs from this Pokémon's horn, any slight wound you have will be healed.",
+          "version": "sword"
+        },
+        {
+          "text": "This Pokémon will look into your eyes and read the contents of your heart. If it finds evil there, it promptly hides away.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "rapidash-galar": {
+    "es": {
+      "genus": "Pokémon Cuernsingular",
+      "entries": [
+        {
+          "text": "Lanza ataques Psicocorte desde su cuerno con una potencia devastadora, capaz de perforar hasta gruesas planchas de chapa.",
+          "version": "sword"
+        },
+        {
+          "text": "De temperamento valiente y orgulloso. Cubre sus pezuñas con energía psíquica para desplazarse ágilmente por los bosques.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Unique Horn Pokémon",
+      "entries": [
+        {
+          "text": "Little can stand up to its psycho cut. Unleashed from this Pokémon's horn, the move will punch a hole right through a thick metal sheet.",
+          "version": "sword"
+        },
+        {
+          "text": "Brave and prideful, this Pokémon dashes airily through the forest, its steps aided by the psychic power stored in the fur on its fetlocks.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "slowpoke-galar": {
+    "es": {
+      "genus": "Pokémon Atontado",
+      "entries": [
+        {
+          "text": "La ingesta continuada de semillas de una planta originaria de Galar ha propiciado que su cola tenga un sabor picante.",
+          "version": "sword"
+        },
+        {
+          "text": "Normalmente está en la inopia, pero a veces su mirada se vuelve repentinamente vivaz, quizá debido a los estimulantes que ingiere con su dieta.",
+          "version": "shield"
+        },
+        {
+          "text": "La ingesta continuada de semillas de una planta originaria de Galar ha propiciado que su cola tenga un sabor picante.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Normalmente está en la inopia, pero a veces su mirada se vuelve repentinamente vivaz, quizá debido a los estimulantes que ingiere con su dieta.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Dopey Pokémon",
+      "entries": [
+        {
+          "text": "Because Galarian Slowpoke eat the seeds of a plant that grows only in Galar, their tails have developed a spicy flavor.",
+          "version": "sword"
+        },
+        {
+          "text": "Although this Pokémon is normally zoned out, its expression abruptly sharpens on occasion. The cause for this seems to lie in Slowpoke's diet.",
+          "version": "shield"
+        },
+        {
+          "text": "Because Galarian Slowpoke eat the seeds of a plant that grows only in Galar, their tails have developed a spicy flavor.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Although this Pokémon is normally zoned out, its expression abruptly sharpens on occasion. The cause for this seems to lie in Slowpoke's diet.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "slowbro-galar": {
+    "es": {
+      "genus": "Pokémon Ermitaño",
+      "entries": [
+        {
+          "text": "Al morderlo, Shellder provocó una reacción química con las especias que había en el cuerpo de Slowbro, lo que le ha conferido el tipo Veneno.",
+          "version": "sword"
+        },
+        {
+          "text": "Si Slowbro aprieta con fuerza la lengua de Shellder, este dispara un líquido venenoso por la punta de la concha.",
+          "version": "shield"
+        },
+        {
+          "text": "Al morderlo, Shellder provocó una reacción química con las especias que había en el cuerpo de Slowbro, lo que le ha conferido el tipo Veneno.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Si Slowbro aprieta con fuerza la lengua de Shellder, este dispara un líquido venenoso por la punta de la concha.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Hermit Crab Pokémon",
+      "entries": [
+        {
+          "text": "A Shellder bite set off a chemical reaction with the spices inside Slowbro's body, causing Slowbro to become a Poison-type Pokémon.",
+          "version": "sword"
+        },
+        {
+          "text": "If this Pokémon squeezes the tongue of the Shellder biting it, the Shellder will launch a toxic liquid from the tip of its shell.",
+          "version": "shield"
+        },
+        {
+          "text": "A Shellder bite set off a chemical reaction with the spices inside Slowbro's body, causing Slowbro to become a Poison-type Pokémon.",
+          "version": "scarlet"
+        },
+        {
+          "text": "If this Pokémon squeezes the tongue of the Shellder biting it, the Shellder will launch a toxic liquid from the tip of its shell.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "farfetchd-galar": {
+    "es": {
+      "genus": "Pokémon Pato Salvaje",
+      "entries": [
+        {
+          "text": "El puerro que blande, grande y recio, proviene de una especie endémica de Galar, y es lo que ha propocado este cambio de forma.",
+          "version": "sword"
+        },
+        {
+          "text": "Guerreros de noble corazón que luchan blandiendo sus puerros con destreza para defenderse de los ataques y golpear a los rivales.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Wild Duck Pokémon",
+      "entries": [
+        {
+          "text": "The stalks of leeks are thicker and longer in the Galar region. Farfetch'd that took up these stalks took on a unique form.",
+          "version": "sword"
+        },
+        {
+          "text": "These courageous warriors wield thick, tough leeks in battle. They use them to deflect attacks and then strike their opponents.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "weezing-galar": {
+    "es": {
+      "genus": "Pokémon Gas Veneno",
+      "entries": [
+        {
+          "text": "Se alimenta de partículas contaminantes. Expulsa aire limpio por la especie de chimeneas que tiene en la cabeza.",
+          "version": "sword"
+        },
+        {
+          "text": "Su forma ha cambiado por algún motivo. Se cree que esto sucedió antaño, en una época en la que numerosas fábricas contaminaban el aire.",
+          "version": "shield"
+        },
+        {
+          "text": "En una época en que las chimeneas estaban muy de moda, se afincó con los humanos para absorber el humo contaminante que estas expedían.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Al nutrirse de la contaminación del aire que respira, expulsa en su lugar un gas limpio y fresco por su prominente chistera.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Poison Gas Pokémon",
+      "entries": [
+        {
+          "text": "This Pokémon consumes particles that contaminate the air. Instead of leaving droppings, it expels clean air.",
+          "version": "sword"
+        },
+        {
+          "text": "Long ago, during a time when droves of factories fouled the air with pollution, Weezing changed into this form for some reason.",
+          "version": "shield"
+        },
+        {
+          "text": "During a time when smokestacks were a common sight, this Pokémon lived with humans so it could eat the polluted smoke.",
+          "version": "scarlet"
+        },
+        {
+          "text": "As it breathes in air pollution for nourishment, it expels clean, cool air from its tall, top-hat-like heads.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "mr-mime-galar": {
+    "es": {
+      "genus": "Pokémon Danza",
+      "entries": [
+        {
+          "text": "Todo un experto en el claqué. Congela el suelo para formar una barrera de hielo a base de dar patadas en él.",
+          "version": "sword"
+        },
+        {
+          "text": "Desprende aire gélido por la planta de los pies. Puede pasarse todo el día bailando claqué sobre el suelo de hielo.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Dancing Pokémon",
+      "entries": [
+        {
+          "text": "Its talent is tap-dancing. It can also manipulate temperatures to create a floor of ice, which this Pokémon can kick up to act as a barrier.",
+          "version": "sword"
+        },
+        {
+          "text": "It can radiate chilled air from the bottoms of its feet. It'll spend the whole day tap-dancing on a frozen floor.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "corsola-galar": {
+    "es": {
+      "genus": "Pokémon Coral",
+      "entries": [
+        {
+          "text": "Habita lugares que antaño estuvieron cubiertos por el mar. Quien lo confunda con una piedra y le dé una patada sufrirá una maldición.",
+          "version": "sword"
+        },
+        {
+          "text": "Los bruscos cambios de temperatura de la era glaciar provocaron su extinción. Absorbe la energía vital mediante sus ramas corporales.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Coral Pokémon",
+      "entries": [
+        {
+          "text": "Watch your step when wandering areas oceans once covered. What looks like a stone could be this Pokémon, and it will curse you if you kick it.",
+          "version": "sword"
+        },
+        {
+          "text": "Sudden climate change wiped out this ancient kind of Corsola. This Pokémon absorbs others' life-force through its branches.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "zigzagoon-galar": {
+    "es": {
+      "genus": "Pokémon Mapachito",
+      "entries": [
+        {
+          "text": "Se pasa el día corriendo de aquí para allá y no le importa chocar contra los demás con el fin de provocar peleas.",
+          "version": "sword"
+        },
+        {
+          "text": "Al tratarse de la variedad más antigua de la especie Zigzagoon, se cree que sus habituales movimientos en zigzag provienen de ella.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Tiny Raccoon Pokémon",
+      "entries": [
+        {
+          "text": "Its restlessness has it constantly running around. If it sees another Pokémon, it will purposely run into them in order to start a fight.",
+          "version": "sword"
+        },
+        {
+          "text": "Thought to be the oldest form of Zigzagoon, it moves in zigzags and wreaks havoc upon its surroundings.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "linoone-galar": {
+    "es": {
+      "genus": "Pokémon Lanzado",
+      "entries": [
+        {
+          "text": "Una especie sumamente combativa que ataca a la desesperada incluso a rivales que lo superan en fuerza.",
+          "version": "sword"
+        },
+        {
+          "text": "Provoca a los rivales con su larga lengua y, cuando lo atacan de pura rabia, reacciona asestándoles un potente y feroz Placaje.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Rushing Pokémon",
+      "entries": [
+        {
+          "text": "This very aggressive Pokémon will recklessly challenge opponents stronger than itself.",
+          "version": "sword"
+        },
+        {
+          "text": "It uses its long tongue to taunt opponents. Once the opposition is enraged, this Pokémon hurls itself at the opponent, tackling them forcefully.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "darumaka-galar": {
+    "es": {
+      "genus": "Pokémon Daruma",
+      "entries": [
+        {
+          "text": "Hace mucho vivía en zonas cálidas, pero, debido a un enfriamiento global, terminó por adaptarse a vivir en áreas cubiertas de nieve.",
+          "version": "sword"
+        },
+        {
+          "text": "Ha perdido su antigua naturaleza fogosa a favor de un carácter afable. Cada vez que encuentra un muñeco de nieve, le asoma la curiosidad.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Zen Charm Pokémon",
+      "entries": [
+        {
+          "text": "It lived in snowy areas for so long that its fire sac cooled off and atrophied. It now has an organ that generates cold instead.",
+          "version": "sword"
+        },
+        {
+          "text": "The colder they get, the more energetic they are. They freeze their breath to make snowballs, using them as ammunition for playful snowball fights.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "darmanitan-galar-standard": {
+    "es": {
+      "genus": "Pokémon Daruma",
+      "entries": [
+        {
+          "text": "Los días de fuerte ventisca baja a los asentamientos humanos. Guarda las provisiones en la bola de nieve de su cabeza para llevárselas a casa.",
+          "version": "sword"
+        },
+        {
+          "text": "Pese a su temperamento afable, alberga un poder inmenso. En combate, embiste al rival tras congelar la bola de nieve de su cabeza para endurecerla.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Zen Charm Pokémon",
+      "entries": [
+        {
+          "text": "On days when the blizzards blow through, it comes down to where people live. It stashes food in the snowball on its head, taking it home for later.",
+          "version": "sword"
+        },
+        {
+          "text": "Though it has a gentle disposition, it's also very strong. It will quickly freeze the snowball on its head before headbutting a foe to shatter them.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "darmanitan-galar-zen": {
+    "es": {
+      "genus": "Pokémon Daruma",
+      "entries": [
+        {
+          "text": "La ira ha reactivado su saca de fuego, que se suponía atrofiada. Emite llamaradas en todas direcciones sin importarle nada a su alrededor.",
+          "version": "sword"
+        },
+        {
+          "text": "Adopta esta forma cuando monta en cólera y, hasta que esta remite, suelta llamaradas por doquier aun a riesgo de derretirse a sí mismo.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Zen Charm Pokémon",
+      "entries": [
+        {
+          "text": "Anger has reignited its atrophied flame sac. This Pokémon spews fire everywhere as it rampages indiscriminately.",
+          "version": "sword"
+        },
+        {
+          "text": "Darmanitan takes this form when enraged. It won't stop spewing flames until its rage has settled, even if its body starts to melt.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "yamask-galar": {
+    "es": {
+      "genus": "Pokémon Espíritu",
+      "entries": [
+        {
+          "text": "Una tabla de arcilla con una antigua maldición grabada ha tomado el control de Yamask y absorbe su energía oscura.",
+          "version": "sword"
+        },
+        {
+          "text": "Se dice que esta forma de Yamask nació cuando un espíritu vengativo se sintió atraído por una antigua tabla de arcilla.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Spirit Pokémon",
+      "entries": [
+        {
+          "text": "A clay slab with cursed engravings took possession of a Yamask. The slab is said to be absorbing the Yamask's dark power.",
+          "version": "sword"
+        },
+        {
+          "text": "It's said that this Pokémon was formed when an ancient clay tablet was drawn to a vengeful spirit.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "stunfisk-galar": {
+    "es": {
+      "genus": "Pokémon Trampa",
+      "entries": [
+        {
+          "text": "El barro con alta concentración de hierro en el que habita ha dotado a su cuerpo de una dureza similar a la del acero.",
+          "version": "sword"
+        },
+        {
+          "text": "Se oculta en el fango dejando a la vista sus llamativos labios para atraer a sus presas y, cuando se acercan, las atrapa con sus aletas dentadas.",
+          "version": "shield"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Trap Pokémon",
+      "entries": [
+        {
+          "text": "Living in mud with a high iron content has given it a strong steel body.",
+          "version": "sword"
+        },
+        {
+          "text": "Its conspicuous lips lure prey in as it lies in wait in the mud. When prey gets close, Stunfisk clamps its jagged steel fins down on them.",
+          "version": "shield"
+        }
+      ]
+    }
+  },
+  "slowking-galar": {
+    "es": {
+      "genus": "Pokémon Chamán",
+      "entries": [
+        {
+          "text": "La mordedura de Shellder desencadenó una reacción química con los jugos de su cuerpo que confirió a Slowking el tipo Veneno y una gran inteligencia.",
+          "version": "sword"
+        },
+        {
+          "text": "Pronuncia hechizos de naturaleza desconocida para lanzar conjuros, pero el significado de los mismos es todo un misterio.",
+          "version": "shield"
+        },
+        {
+          "text": "La mordedura de Shellder desencadenó una reacción química con los jugos de su cuerpo que confirió a Slowking el tipo Veneno y una gran inteligencia.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Pronuncia hechizos de naturaleza desconocida para lanzar conjuros, pero el significado de los mismos es todo un misterio.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Hexpert Pokémon",
+      "entries": [
+        {
+          "text": "A Shellder bite set off a chemical reaction with the spices inside Slowpoke's body, causing Slowking to become a Poison-type Pokémon and granting it extraordinary intelligence.",
+          "version": "sword"
+        },
+        {
+          "text": "It utters incantations of some kind to cast spells, but exactly what it's saying remains a mystery.",
+          "version": "shield"
+        },
+        {
+          "text": "A Shellder bite set off a chemical reaction with the spices inside Slowpoke's body, causing Slowking to become a Poison-type Pokémon and granting it extraordinary intelligence.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It utters incantations of some kind to cast spells, but exactly what it's saying remains a mystery.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "articuno-galar": {
+    "es": {
+      "genus": "Pokémon Crueldad",
+      "entries": [
+        {
+          "text": "Las cuchillas que hacen las veces de plumas están formadas por energía psíquica y pueden cortar gruesas planchas de hierro como si fueran de papel.",
+          "version": "sword"
+        },
+        {
+          "text": "Se le dio el nombre de Articuno porque lanza un rayo por los ojos capaz de inmovilizar al rival como si se quedara congelado.",
+          "version": "shield"
+        },
+        {
+          "text": "Las cuchillas que hacen las veces de plumas están formadas por energía psíquica y pueden cortar gruesas planchas de hierro como si fueran de papel.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Se le dio el nombre de Articuno porque lanza un rayo por los ojos capaz de inmovilizar al rival como si se quedara congelado.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Cruel Pokémon",
+      "entries": [
+        {
+          "text": "Its feather-like blades are composed of psychic energy and can sheer through thick iron sheets as if they were paper.",
+          "version": "sword"
+        },
+        {
+          "text": "Known as Articuno, this Pokémon fires beams that can immobilize opponents as if they had been frozen solid.",
+          "version": "shield"
+        },
+        {
+          "text": "Its feather-like blades are composed of psychic energy and can shear through thick iron sheets as if they were paper.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Known as Articuno, this Pokémon fires beams that can immobilize opponents as if they had been frozen solid.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "zapdos-galar": {
+    "es": {
+      "genus": "Pokémon Patadas",
+      "entries": [
+        {
+          "text": "Una sola de sus patadas tiene la potencia suficiente para destrozar un camión volquete. Se dice que corre por las montañas a 300 km/h.",
+          "version": "sword"
+        },
+        {
+          "text": "El roce de sus plumas produce un chasquido similar al de la electricidad, y este es el motivo por el que se le dio el nombre de Zapdos.",
+          "version": "shield"
+        },
+        {
+          "text": "Una sola de sus patadas tiene la potencia suficiente para destrozar un camión volquete. Se dice que corre por las montañas a 300 km/h.",
+          "version": "scarlet"
+        },
+        {
+          "text": "El roce de sus plumas produce un chasquido similar al de la electricidad, y este es el motivo por el que se le dio el nombre de Zapdos.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Strong Legs Pokémon",
+      "entries": [
+        {
+          "text": "One kick from its powerful legs will pulverize a dump truck. Supposedly, this Pokémon runs through the mountains at over 180 mph.",
+          "version": "sword"
+        },
+        {
+          "text": "When its feathers rub together, they produce a crackling sound like the zapping of electricity. That's why this Pokémon is called Zapdos.",
+          "version": "shield"
+        },
+        {
+          "text": "One kick from its powerful legs will pulverize a dump truck. Supposedly, this Pokémon runs through the mountains at over 180 mph.",
+          "version": "scarlet"
+        },
+        {
+          "text": "When its feathers rub together, they produce a crackling sound like the zapping of electricity. That's why this Pokémon is called Zapdos.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "moltres-galar": {
+    "es": {
+      "genus": "Pokémon Malignidad",
+      "entries": [
+        {
+          "text": "El aura maligna de color rojo oscuro que despide como si fuera fuego es lo que le valió el nombre de Moltres.",
+          "version": "sword"
+        },
+        {
+          "text": "Desprende un aura maligna que aísla de su entorno a aquellos que se acercan demasiado y acaba con sus energías.",
+          "version": "shield"
+        },
+        {
+          "text": "El aura maligna de color rojo oscuro que despide como si fuera fuego es lo que le valió el nombre de Moltres.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Desprende un aura maligna que aísla de su entorno a aquellos que se acercan demasiado y acaba con sus energías.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Malevolent Pokémon",
+      "entries": [
+        {
+          "text": "The sinister aura that blazes like magenta fire around this Pokémon is what inspired the name Moltres.",
+          "version": "sword"
+        },
+        {
+          "text": "It exudes a sinister aura that leaves those on the receiving end completely exhausted.",
+          "version": "shield"
+        },
+        {
+          "text": "The sinister aura that blazes like magenta fire around this Pokémon is what inspired the name Moltres.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It exudes a sinister aura that leaves those on the receiving end completely exhausted.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "growlithe-hisui": {
+    "es": {
+      "genus": "Pokémon Perrito",
+      "entries": [
+        {
+          "text": "Patrullan el territorio por parejas. A juzgar por su pelaje con componentes rocosos de naturaleza ígnea, presumo que la actividad volcánica alteró su anatomía.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Patrullan el territorio por parejas. A juzgar por su pelaje con componentes rocosos de naturaleza ígnea, presumo que la actividad volcánica alteró su anatomía.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Se trata de un Pokémon valeroso y muy leal. Cuenta con elementos rocosos de naturaleza ígnea en la cabeza y alrededor del cuello.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Scout Pokémon",
+      "entries": [
+        {
+          "text": "They patrol their territory in pairs. I believe the igneous rock components in the fur of this species are the result of volcanic activity in its habitat.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "They patrol their territory in pairs. I believe the igneous rock components in the fur of this species are the result of volcanic activity in its habitat.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It is a courageous and trustworthy Pokémon. It has igneous rock on its head and around its neck.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "arcanine-hisui": {
+    "es": {
+      "genus": "Pokémon Leyenda",
+      "entries": [
+        {
+          "text": "Enseña a sus oponentes sus colmillos prendidos en llamas abrasadoras. Pese a su gran corpulencia, es ágil y diestro, y engatusa a sus oponentes bailando a su alrededor.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Enseña a sus oponentes sus colmillos prendidos en llamas abrasadoras. Pese a su gran corpulencia, es ágil y diestro, y engatusa a sus oponentes bailando a su alrededor.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Atrapa y quema al rival con las llamas que arden de forma violenta en el interior de su cuerpo y en las que se envuelve para atacar.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Legendary Pokémon",
+      "entries": [
+        {
+          "text": "Snaps at its foes with fangs cloaked in blazing flame. Despite its bulk, it feints every which way, leading opponents on a deceptively merry chase as it all but dances around them.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Snaps at its foes with fangs cloaked in blazing flame. Despite its bulk, it feints every which way, leading opponents on a deceptively merry chase as it all but dances around them.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It bathes itself in the blazing flames that fiercely ignite within its body, then charges at its opponents to wrap them in fire.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "voltorb-hisui": {
+    "es": {
+      "genus": "Pokémon Esfera",
+      "entries": [
+        {
+          "text": "Enigmático Pokémon de gran parecido a una Poké Ball. Su aspecto destila regocijo y, cuando siente una alegría desbordante, libera de su interior la corriente eléctrica que almacena.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Tiene una actitud inocente y afable, pero, si se emociona demasiado, suelta descargas eléctricas que fulminan a los que se encuentran a su lado.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Su aspecto exterior presenta una enorme semejanza con los Bonguris. Es un misterio el mecanismo mediante el cual genera electricidad en su vientre.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Sphere Pokémon",
+      "entries": [
+        {
+          "text": "An enigmatic Pokémon that happens to resemble a Poké Ball. When excited, it discharges the electric current it has stored in its belly, letting out a great, uproarious laugh.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "It is very excitable and discharges electricity from its belly when it laughs.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Its makeup is strikingly similar to that of an Apricorn. The mechanism by which it discharges electricity from its belly is unknown.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "electrode-hisui": {
+    "es": {
+      "genus": "Pokémon Esfera",
+      "entries": [
+        {
+          "text": "Es susceptible de irritarse con pasmosa facilidad, lo que a menudo desencadena descargas eléctricas. Alberga en su interior un poder equiparable al de veinte rayos, por lo que su simple presencia impone bastante respeto.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "El tejido vegetal de su superficie se asemeja bastante a la madera de los Bonguris y resulta idéntico al de Voltorb de Hisui.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Si algo le hace perder los estribos, expulsa la energía eléctrica que acumula en su vientre y explota.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Sphere Pokémon",
+      "entries": [
+        {
+          "text": "The tissue on the surface of its body is strikingly similar to that of an Apricorn. When irritated, this Pokémon lets loose an electric current equal to 20 lightning bolts.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "The tissue on the surface of its body is strikingly similar to that of an Apricorn, and it has the exact same makeup as a Hisuian Voltorb.",
+          "version": "scarlet"
+        },
+        {
+          "text": "When something gets under its skin, it discharges its stored electricity from the hole in its belly and blows itself up.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "typhlosion-hisui": {
+    "es": {
+      "genus": "Pokémon Fuego Fatuo",
+      "entries": [
+        {
+          "text": "Afirmo que su grácil y refinada figura procede de la influencia del Monte Corona, donde confluyen en su cima las energías místicas para alzarse hacia el firmamento.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Dicen que se alimenta de espíritus errantes, a los que purifica con sus llamas y envía a donde pertenecen.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Suele ser dócil y pacífico, pero, al enfurecerse, es capaz de calcinar a sus oponentes hasta que no quedan de ellos más que las cenizas.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Ghost Flame Pokémon",
+      "entries": [
+        {
+          "text": "Said to purify lost, wandering souls with its flames and guide them to the afterlife. I believe its form has been influenced by the energy of the sacred mountain towering at Hisui’s center.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "It’s said to eat wayward spirits, purify them with its flames, and return them to where they belong.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It is usually gentle and pacifistic, but if angered, it can destroy opponents, burning them until not even ash remains.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "qwilfish-hisui": {
+    "es": {
+      "genus": "Pokémon Globo",
+      "entries": [
+        {
+          "text": "Esparce su veneno, el cual acarrea efectos nefastos, merced a los pinchos que lo recubren. Su aspecto abotargado obedece asimismo a estos, y detenta el sobrenombre de Demonio del Mar.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Su potente veneno y sus peligrosas púas le han valido el apelativo de Demonio del Mar. Detesta que alguien lo ensucie.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Traga grandes cantidades de agua y aumenta el tamaño de su cuerpo para intimidar a su presa al disparar las venenosas púas que lo recubren.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Balloon Pokémon",
+      "entries": [
+        {
+          "text": "Fishers despise this Pokémon for spilling poison from its spikes, wreaking havoc in the sea. It takes a fearsome posture and goes by the nickname of Sea Fiend.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "It earned the nickname the Sea Fiend due to its potent poison and dangerous spikes. It despises getting dirty.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It swallows seawater to bloat its body, intimidating opponents. It also uses the water pressure to shoot its toxic spikes in all directions.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "sneasel-hisui": {
+    "es": {
+      "genus": "Pokémon Garra Filo",
+      "entries": [
+        {
+          "text": "Sus afiladas y recias garras son ideales para escalar acantilados en zonas frías y escarpadas. Al asestar un tajo con ellas, inyecta un veneno letal.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Desprende un potente veneno por las puntas de las garras y ataca saltando por sorpresa sobre el rival a fin de inmovilizarlo.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Estas formas con potentes garras venenosas y gran aptitud para el combate se avistaban antaño en otras tierras.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Sharp Claw Pokémon",
+      "entries": [
+        {
+          "text": "Its sturdy, curved claws are ideal for traversing precipitous cliffs. From the tips of these claws drips a venom that infiltrates the nerves of any prey caught in Sneasel’s grasp.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "It secretes a potent poison from the tips of its claws. It leaps at prey, trying to get the jump on them and immobilize them.",
+          "version": "scarlet"
+        },
+        {
+          "text": "This species of Sneasel, possessing a great aptitude for battle and claws equipped with a potent venom, was once found in a distant land.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "samurott-hisui": {
+    "es": {
+      "genus": "Pokémon Majestuosidad",
+      "entries": [
+        {
+          "text": "De natural impasible y adusto. En la batalla hace gala de insólita maestría, derribando en un santiamén a sus adversarios con ráfagas continuas asestadas con las espadas que guarda en sus fundas, las cuales resultan imperceptibles a la vista.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Posee un corazón despiadado y un carácter impasible. El veloz tajo que asesta con la espada que alberga en su armadura se equipara a las turbulentas olas.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Derrota a sus adversarios a base de engaños e insidias. Su estilo de combate se asemeja a las violentas corrientes de un río que todo lo arrastran a su paso.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Formidable Pokémon",
+      "entries": [
+        {
+          "text": "Hard of heart and deft of blade, this rare form of Samurott is a product of the Pokémon’s evolution in the region of Hisui. Its turbulent blows crash into foes like ceaseless crashing waves.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "This Pokémon is hard of heart and deft of blade. Its turbulent blows crash into foes like ceaseless crashing waves.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It will use any means necessary to win. Its fighting style is akin to the flowing water of a mighty river—relentless and all-consuming.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "lilligant-hisui": {
+    "es": {
+      "genus": "Pokémon Danza",
+      "entries": [
+        {
+          "text": "Las condiciones inexpugnables del nevado terruño que habita le han dotado de portentosas patas. Expele una dulce fragancia por la corona capilar para enardecer al máximo a aquellos que se hallen a su alrededor.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Desprende una dulce fragancia de su flor. Las duras montañas nevadas en las que habita son las responsables de haber dotado a sus patas de tal robustez.",
+          "version": "scarlet"
+        },
+        {
+          "text": "El grácil movimiento de sus piernas atrae a numerosos curiosos, que acaban cautivados. Existen personas que confieren al talento de Lilligant la categoría de arte.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Spinning Pokémon",
+      "entries": [
+        {
+          "text": "I suspect that its well-developed legs are the result of a life spent on mountains covered in deep snow. The scent it exudes from its flower crown heartens those in proximity.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "It exudes a sweet scent from the flower on its head. It has stout legs that were developed by the harsh, snowy mountains where it lives.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Countless people find themselves captivated by the graceful way this Pokémon moves its legs. Some even go so far as to call its movements art.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "zorua-hisui": {
+    "es": {
+      "genus": "Pokémon Zorro Rencor",
+      "entries": [
+        {
+          "text": "El rencor acérrimo obrado por quienes lo echaron de su terruño dio pie a que adquiriese su actual forma ilusoria. Se nutre de la congoja de sus víctimas.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Su cuerpo inerte renació en Hisui al llenarse de un acérrimo rencor. Se nutre del terror que inflige a los demás cuando se les aparece.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Es de naturaleza apacible. La ilusión que crea para atemorizar y ahuyentar al enemigo constituye una clara expresión de su deseo de ser dejado en paz.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Spiteful Fox Pokémon",
+      "entries": [
+        {
+          "text": "A once-departed soul, returned to life in Hisui. Derives power from resentment, which rises as energy atop its head and takes on the forms of foes. In this way, Zorua vents lingering malice.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "This soul, once dead, was brought back to life by its resentment. It takes power from the terror of the people and Pokémon it frightens.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Normally, this is a docile Pokémon. The illusions it creates to scare its enemies away are an expression of Zorua’s desire to simply be left alone.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "zoroark-hisui": {
+    "es": {
+      "genus": "Pokémon Zorro Maldición",
+      "entries": [
+        {
+          "text": "Muestra a quien se acerca su melena envuelta en un aura ilusoria cargada de un acérrimo y agónico rencor. Provoca un terror insufrible a sus víctimas del que son presa a posteriori.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "La ilusión que crea su pelaje blanco está imbuida en acérrimo rencor, por lo que desgarra tanto el corazón como el cuerpo de los enemigos.",
+          "version": "scarlet"
+        },
+        {
+          "text": "El rencor y la animadversión desmedidos de este Pokémon, que lo mueven a rechazar y odiar todo lo que lo rodea, le desgarran a su vez el cuerpo en silencio.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Baneful Fox Pokémon",
+      "entries": [
+        {
+          "text": "With its disheveled white illusion-weaving hair, it cuts an eerily chilling figure. The illusions it creates carry a curse of deep resentment, causing agonizing terror to those who see them.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "The white hair covering its body is infused with bitter resentment. The illusions it creates tear at the minds and bodies of its foes.",
+          "version": "scarlet"
+        },
+        {
+          "text": "This Pokémon is full of intense spite and animosity toward all things. The hatred that drives it also slowly tears its own body apart.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "braviary-hisui": {
+    "es": {
+      "genus": "Pokémon Grito Guerra",
+      "entries": [
+        {
+          "text": "Especie que migra en la época invernal. Profiere un chillido fantasmagórico que infunde su poder psíquico en la forma de unas ondas de choque con las que paraliza a sus presas.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Infunde sus poderes psíquicos en su terrible chillido para emitir ondas de choque. Atrapa con sus poderosas garras a las presas debilitadas y las hace pedazos.",
+          "version": "scarlet"
+        },
+        {
+          "text": "En lugar de surcar los cielos en bandadas de sus congéneres, prefiere hacerlo en solitario. La extraña aura que lo rodea le ayuda a camuflarse en el cielo nocturno.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Battle Cry Pokémon",
+      "entries": [
+        {
+          "text": "A bird of prey that comes to Hisui in winter. It gathers psychic power in its eyes, emitting cries to launch shock waves from a distance that debilitate foes.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "It imbues its terrifying battle cries with psychic power to generate shock waves. It tears weakened opponents to pieces with its sharp talons.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Rather than form a flock with others of its kind, this Pokémon prefers to fly alone. It cloaks itself in an eerie aura that allows it to camouflage itself in the night sky.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "sliggoo-hisui": {
+    "es": {
+      "genus": "Pokémon Caracol",
+      "entries": [
+        {
+          "text": "Una criatura de lo más lúgubre. Se rumorea que la dura concha metálica que lo recubre es el producto de la reacción entre sus fluidos dérmicos y el hierro de las aguas hisuianas.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Su dura concha metálica es el producto de la reacción entre los fluidos que secreta por la piel y el hierro de las aguas de Hisui.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Sus fluidos tienen la capacidad de corroer el metal. Se esconde en su concha y ataca a sus enemigos arrojándoles ácido venenoso.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Snail Pokémon",
+      "entries": [
+        {
+          "text": "A creature given to melancholy. I suspect its metallic shell is the result of the mucus on its skin reacting with the iron in Hisui's water.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Its metallic shell is the result of the mucus on its skin reacting with the iron in Hisui's water.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Its mucus can dissolve metal. It hides inside its shell and attacks enemies by pouring its poisonous acid over them.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "goodra-hisui": {
+    "es": {
+      "genus": "Pokémon Dragón",
+      "entries": [
+        {
+          "text": "Capaz de controlar a voluntad el grosor de su concha metálica. Es de natural sumamente apegado y, de no tener cerca a quien considera suyo, lo inundan la rabia y el desconsuelo.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Es de una naturaleza sumamente apegada y, de no tener cerca a quien considera suyo, lo inundan la rabia y el desconsuelo.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Es capaz de controlar a voluntad la dureza de su concha metálica. Se guarece con holgura en su interior para entrar en combate.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Dragon Pokémon",
+      "entries": [
+        {
+          "text": "Able to freely control the hardness of its metallic shell. It loathes solitude and is extremely clingy—it will fume and run riot if those dearest to it ever leave its side.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "It loathes solitude and is extremely clingy—it will fume and run riot if those dearest to it ever leave its side.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It can freely control the hardness of its metallic shell. It fits comfortably inside its shell to battle.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "avalugg-hisui": {
+    "es": {
+      "genus": "Pokémon Iceberg",
+      "entries": [
+        {
+          "text": "Los componentes gélidos y rocosos que constituyen su armadura lo hacen irrompible. Emplea la robusta mandíbula para destrozar el hielo y abrirse paso, imponente como un glaciar.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "Su imponente forma de abrirse paso destrozando el hielo a su paso recuerda al avance de un enorme glaciar.",
+          "version": "scarlet"
+        },
+        {
+          "text": "La armadura de hielo que lo recubre es más dura que el acero. En particular, la que le protege la mandíbula puede destrozar rocas inmensas.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Iceberg Pokémon",
+      "entries": [
+        {
+          "text": "The armor of ice covering its lower jaw ruins all before it. As Avalugg pushes forward, it crushes the frozen earth, parting sheer masses of ice.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "The way it pushes forward, crushing the frozen earth and parting sheer masses of ice, is reminiscent of a massive glacier.",
+          "version": "scarlet"
+        },
+        {
+          "text": "The armor of ice covering Avalugg's body is harder than steel. The ice over its lower jaw in particular can shatter gigantic rocks.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "decidueye-hisui": {
+    "es": {
+      "genus": "Pokémon Pluma Flecha",
+      "entries": [
+        {
+          "text": "Las raquis de sus plumas contienen aire que lo aísla del intenso frío de Hisui. Pone de manifiesto que el entorno tiene un gran impacto en el desarrollo y en la evolución.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "El clima inclemente de Hisui ha convertido su otrora naturaleza sosegada en una en extremo fiera. Se vale de sus recias patas en combate.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Es experto en la lucha cuerpo a cuerpo. Los rodillazos que propina con sus corpulentas patas son tan potentes que pueden derribar grandes árboles.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Arrow Quill Pokémon",
+      "entries": [
+        {
+          "text": "The air stored inside the rachises of Decidueye's feathers insulates the Pokémon against Hisui's extreme cold. This is firm proof that evolution can be influenced by environment.",
+          "version": "legends-arceus"
+        },
+        {
+          "text": "It has evolved into a fiercely combative form as a way to survive Hisui's harsh environments. It battles by utilizing its sturdy legs.",
+          "version": "scarlet"
+        },
+        {
+          "text": "This Pokémon prefers close-quarters combat. When it strikes an opponent with its thick, powerful legs, it can fell a tree with a single blow.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "wooper-paldea": {
+    "es": {
+      "genus": "Pokémon Pez Veneno",
+      "entries": [
+        {
+          "text": "Tras perder una disputa por el territorio, empezó a vivir en tierra firme. Para protegerse, recubre su cuerpo con una membrana tóxica.",
+          "version": "scarlet"
+        },
+        {
+          "text": "Caminar en solitario les resulta peligroso, por lo que suelen desplazarse por los pantanos formando filas de tres o cuatro individuos.",
+          "version": "violet"
+        }
+      ]
+    },
+    "en": {
+      "genus": "Poison Fish Pokémon",
+      "entries": [
+        {
+          "text": "After losing a territorial struggle, Wooper began living on land. The Pokémon changed over time, developing a poisonous film to protect its body.",
+          "version": "scarlet"
+        },
+        {
+          "text": "It is dangerous for it to travel alone. They line up in groups of three or four and help each other as they walk around the bogs.",
+          "version": "violet"
+        }
+      ]
+    }
+  },
+  "tauros-paldea-combat": {
+    "es": {
+      "genus": "Pokémon Toro Bravo",
+      "entries": [
+        { "text": "Destaca en el combate cuerpo a cuerpo gracias a su constitución musculosa. Ataca los puntos vitales del enemigo con sus cortos cuernos.", "version": "scarlet" },
+        { "text": "La Variedad Combatiente se distingue por su fornida y poderosa musculatura y por su temperamento especialmente agresivo.", "version": "violet" }
+      ]
+    },
+    "en": {
+      "genus": "Wild Bull Pokémon",
+      "entries": [
+        { "text": "This Pokémon has a muscular body and excels at close-quarters combat. It uses its short horns to strike the opponent's weak spots.", "version": "scarlet" },
+        { "text": "This kind of Tauros, known as the Combat Breed, is distinguished by its thick, powerful muscles and its fierce disposition.", "version": "violet" }
+      ]
+    }
+  },
+  "tauros-paldea-blaze": {
+    "es": {
+      "genus": "Pokémon Toro Bravo",
+      "entries": [
+        { "text": "La Variedad Ardiente debe su nombre a la capacidad de exhalar aire a altas temperaturas por el hocico. Lleva las tres colas trenzadas.", "version": "scarlet" },
+        { "text": "Sus cuernos alcanzan los 1000 ºC cuando los calienta con energía ígnea. Quienes reciben una de sus cornadas sufren heridas y quemaduras.", "version": "violet" }
+      ]
+    },
+    "en": {
+      "genus": "Wild Bull Pokémon",
+      "entries": [
+        { "text": "People call this kind of Tauros the Blaze Breed due to the hot air it snorts from its nostrils. Its three tails are intertwined.", "version": "scarlet" },
+        { "text": "When heated by fire energy, its horns can get hotter than 1,800 degrees Fahrenheit. Those gored by them will suffer both wounds and burns.", "version": "violet" }
+      ]
+    }
+  },
+  "tauros-paldea-aqua": {
+    "es": {
+      "genus": "Pokémon Toro Bravo",
+      "entries": [
+        { "text": "Perfora a sus rivales lanzando chorros de agua a alta presión por la cavidad que tiene en la punta de los cuernos.", "version": "scarlet" },
+        { "text": "Su elevado nivel de grasa corporal permite a la Variedad Acuática flotar en el agua. Se propulsa expulsando agua por los cuernos.", "version": "violet" }
+      ]
+    },
+    "en": {
+      "genus": "Wild Bull Pokémon",
+      "entries": [
+        { "text": "This Pokémon exhales water high into the air from the holes in its horn tips. Its traits belong to the Aqua Breed of Tauros.", "version": "scarlet" },
+        { "text": "This breed of Tauros has a high body fat percentage, which allows it to float easily. It swims happily, bobbing along on the water.", "version": "violet" }
+      ]
+    }
+  }
+}

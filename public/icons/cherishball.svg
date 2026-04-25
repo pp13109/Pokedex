@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="400" height="400">
+  <defs>
+    <clipPath id="pokeball-clip">
+      <circle cx="60" cy="60" r="60" />
+    </clipPath>
+    <clipPath id="cut-LR">
+      <rect x="2.63938" y="0" width="114.72124" height="120"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cut-LR)">
+    <g clip-path="url(#pokeball-clip)">
+      <rect x="0" y="0" width="120" height="120" fill="#E33539"/>
+
+      <rect x="0" y="59.5" width="120" height="1" fill="#151515"/>
+
+      <rect x="0" y="56" width="22.5" height="8" fill="#E33539" stroke="#151515" stroke-width="27.2" stroke-linejoin="round"/>
+
+      <rect x="97.5" y="56" width="22.5" height="8" fill="#E33539" stroke="#151515" stroke-width="27.2" stroke-linejoin="round"/>
+
+      <rect x="0" y="59.5" width="25" height="1" fill="#E33539" stroke="#E33539" stroke-width="3" stroke-linejoin="round"/>
+
+      <rect x="95" y="59.5" width="25" height="1" fill="#E33539" stroke="#E33539" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <circle cx="60" cy="60" r="18" fill="#151515"/>
+  
+  <circle cx="60" cy="60" r="10" fill="#E33539"/>
+</svg>

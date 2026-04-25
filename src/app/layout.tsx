@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import Image from "next/image";
+import { MotionProvider } from "@/shared/components/motion-provider";
+import Header from "@/shared/components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pokédex",
-  description: "Pokédex built with Next.js, TypeScript and PokéAPI.",
+  title: {
+    default: "Pokédex",
+    template: "%s",
+  },
+  description: "Pokédex construida con Next.js, TypeScript y PokéAPI.",
 };
 
 export default function RootLayout({
@@ -23,11 +30,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
-    >
-      <body className="min-h-screen bg-zinc-950 text-zinc-50 antialiased">{children}</body>
+    <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="min-h-screen text-zinc-50 antialiased">
+        <MotionProvider>
+          <div className="relative min-h-screen">
+            <Header />
+
+            {children}
+          </div>
+        </MotionProvider>
+      </body>
     </html>
   );
 }
