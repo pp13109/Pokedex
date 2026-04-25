@@ -8,10 +8,25 @@ export type PokemonStat = {
   value: number;
 };
 
+export type PokemonDescriptions = {
+  text: string;
+  version: string;
+};
+
+export type PokemonEvolutionChain = {
+  name: string;
+  stage: number;
+  condition: string | null;
+};
+
 export type PokemonDetail = {
   id: number;
+  isDefault: boolean;
   name: string;
-  slug: string;
+  displayName: string;
+  pokedexNumber: number;
+  genus: string;
+  descriptions: PokemonDescriptions[];
   imageUrl: string | null;
   imageUrlShiny: string | null;
   types: string[];
@@ -19,4 +34,5 @@ export type PokemonDetail = {
   weightKg: number;
   abilities: PokemonAbility[];
   stats: PokemonStat[];
+  evolutionChain: PokemonEvolutionChain[];
 };

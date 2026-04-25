@@ -55,12 +55,12 @@ export function PokemonGrid({
       ) : (
         <div
           key="results-grid"
-          className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
+          className="grid gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
           role="list"
           aria-label="Resultados de Pokémon"
         >
           {pokemon.map((item, index) => (
-            <PokemonCard key={item.slug} pokemon={item} index={index} />
+            <PokemonCard key={item.name} pokemon={item} index={index} />
           ))}
         </div>
       )}

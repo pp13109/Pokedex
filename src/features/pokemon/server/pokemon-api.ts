@@ -26,9 +26,12 @@ export class PokeApiNotFoundError extends Error {
 
 export async function pokeApiFetch<T>(
   path: string,
+  completePath: boolean = false,
   options?: PokeApiFetchOptions,
 ): Promise<T> {
-  const response = await fetch(`${POKEAPI_BASE_URL}${path}`, {
+  const url = completePath ? path : `${POKEAPI_BASE_URL}${path}`;
+
+  const response = await fetch(url, {
     ...options,
     next: {
       revalidate: DEFAULT_REVALIDATE_SECONDS,

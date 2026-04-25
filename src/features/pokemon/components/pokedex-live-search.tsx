@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { motion } from "motion/react";
+import { CiSearch } from "react-icons/ci";
+import { IoClose } from "react-icons/io5";
 
 type PokedexLiveSearchProps = {
   initialQuery: string;
@@ -11,7 +13,7 @@ type PokedexLiveSearchProps = {
 const SEARCH_DEBOUNCE_MS = 300;
 
 export function PokedexLiveSearch({ initialQuery }: PokedexLiveSearchProps) {
-  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const { replace } = useRouter();
   const inputRef = useRef<HTMLInputElement | null>(null);
   const timeoutRef = useRef<number | null>(null);
@@ -38,24 +40,27 @@ export function PokedexLiveSearch({ initialQuery }: PokedexLiveSearchProps) {
     };
   }, []);
 
-  function handleChange(term: string) {
+  function handleChange(query: string) {
     if (timeoutRef.current !== null) {
       window.clearTimeout(timeoutRef.current);
     }
 
     timeoutRef.current = window.setTimeout(() => {
-      const normalizedTerm = term.trim();
+      const params = new URLSearchParams(searchParams.toString());
+
+      const normalizedTerm = query.trim();
 
       if (!normalizedTerm) {
-        replace(pathname, { scroll: false });
-        return;
+        params.delete("query");
+        params.delete("page");
+      } else {
+        params.set("query", normalizedTerm);
+        params.set("page", "1");
       }
 
-      const params = new URLSearchParams();
-      params.set("query", normalizedTerm);
-      params.set("page", "1");
+      const search = params.toString();
 
-      replace(`${pathname}?${params.toString()}`, { scroll: false });
+      replace(search ? `/?${search}` : "/", { scroll: false });
     }, SEARCH_DEBOUNCE_MS);
   }
 
@@ -68,7 +73,7 @@ export function PokedexLiveSearch({ initialQuery }: PokedexLiveSearchProps) {
       inputRef.current.value = "";
     }
 
-    replace(pathname, { scroll: false });
+    handleChange("");
   }
 
   return (
@@ -77,41 +82,45 @@ export function PokedexLiveSearch({ initialQuery }: PokedexLiveSearchProps) {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="rounded-[28px] border border-white/10 bg-white/[0.045] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.18)] backdrop-blur-xl"
+      className="sticky top-15 z-50 flex flex-row gap-3 items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-5 py-4 shadow-[0_12px_32px_rgba(0,0,0,0.18)] backdrop-blur-xl"
     >
-      <div className="space-y-4">
-        <div className="space-y-1">
-          <label
-            htmlFor="pokemon-search"
-            className="text-sm font-medium text-zinc-200"
-          >
-            Buscar Pokémon por nombre
-          </label>
-          <p className="text-sm text-zinc-500">
-            La búsqueda se actualiza automáticamente mientras escribes.
-          </p>
-        </div>
+      <CiSearch className="text-2xl text-zinc-300" />
+      <input
+        ref={inputRef}
+        id="pokemon-search"
+        type="text"
+        defaultValue={initialQuery}
+        onChange={(event) => handleChange(event.target.value)}
+        placeholder="Buscar por nombre..."
+        autoComplete="off"
+        autoCorrect="off"
+        spellCheck={false}
+        className="w-full text-zinc-100 outline-none transition duration-200 placeholder:text-zinc-500"
+      />
 
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <input
-            ref={inputRef}
-            id="pokemon-search"
-            type="text"
-            defaultValue={initialQuery}
-            onChange={(event) => handleChange(event.target.value)}
-            placeholder="Ej. pika, char, mime..."
-            className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-zinc-100 outline-none transition duration-200 placeholder:text-zinc-500 focus:border-indigo-400/40 focus:bg-black/30"
-          />
-
-          <button
-            type="button"
-            onClick={handleClear}
-            className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-zinc-100 transition duration-200 hover:border-white/20 hover:bg-white/10"
-          >
-            Limpiar
-          </button>
-        </div>
-      </div>
+      {initialQuery && (
+        <motion.button
+        id="search_clear_button"
+        layout
+        initial={{
+          opacity: 0,
+          y: 5
+        }}
+        animate={{
+          opacity: 1,
+          y: 0
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "easeIn"
+        }}
+          type="button"
+          onClick={handleClear}
+          className="cursor-pointer text-zinc-300 hover:text-zinc-500 active:text-zinc-400"
+        >
+          <IoClose className="text-2xl" />
+        </motion.button>
+      )}
     </motion.section>
   );
 }
