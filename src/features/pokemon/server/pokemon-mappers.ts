@@ -2,6 +2,7 @@ import type {
   PokemonDescriptions,
   PokemonDetail,
   PokemonEvolutionChain,
+  PokemonStats,
 } from "@/features/pokemon/types/pokemon-detail";
 import type {
   PokemonSpeciesFlavorTextEntriesResponse,
@@ -11,12 +12,14 @@ import type {
   PokemonSpeciesResponse,
   PokemonVariety,
   PokemonManualDescriptionEntries,
+  PokemonStatsResponse,
 } from "@/features/pokemon/types/pokemon-api";
 import type { PokemonListItem } from "@/features/pokemon/types/pokemon-list-item";
 import { toTitleCase } from "@/shared/utils/format";
 import regionalDescriptionsRaw from "@/features/pokemon/data/regional-descriptions.json";
 import altFormDescriptionsRaw from "@/features/pokemon/data/alt-form-descriptions.json";
 import { Language, SYSTEM_LANGUAGE } from "@/shared/constants/preferences";
+import { PokemonType } from "../utils/pokemon-colors";
 
 /**Export */
 export function mapPokemonToListItem(
@@ -32,7 +35,7 @@ export function mapPokemonToListItem(
       pokemonVariety.speciesId,
     forms: pokemonVariety.formType,
     imageUrl: getPokemonImageUrl(pokemon, false),
-    types: sortBySlot(pokemon.types).map((item) => toTitleCase(item.type.name)),
+    types: sortBySlot(pokemon.types).map((item) => toTitleCase(item.type.name) as PokemonType),
   };
 }
 
@@ -57,7 +60,7 @@ export function mapPokemonToDetail(
     ),
     imageUrl: getPokemonImageUrl(pokemon, false),
     imageUrlShiny: getPokemonImageUrl(pokemon, true),
-    types: sortBySlot(pokemon.types).map((item) => toTitleCase(item.type.name)),
+    types: sortBySlot(pokemon.types).map((item) => toTitleCase(item.type.name) as PokemonType),
     heightMeters: pokemon.height / 10,
     weightKg: pokemon.weight / 10,
     abilities: [...pokemon.abilities]
@@ -66,15 +69,53 @@ export function mapPokemonToDetail(
         name: toTitleCase(item.ability.name),
         isHidden: item.is_hidden,
       })),
-    stats: pokemon.stats.map((item) => ({
-      name: toTitleCase(item.stat.name),
-      value: item.base_stat,
-    })),
+    statsBase: {
+      stats: pokemon.stats.map((item) => ({
+        name: toTitleCase(item.stat.name),
+        value: item.base_stat,
+      })),
+      totalStats: pokemon.stats.reduce((total, stat) => total + stat.base_stat, 0),
+    },
+    statsMin: getCalculatedMinMaxStats(pokemon.stats, false),
+    statsMax: getCalculatedMinMaxStats(pokemon.stats, true),
     evolutionChain,
   };
 }
 
 /**Utils */
+function getCalculatedMinMaxStats(
+  stats: PokemonStatsResponse[],
+  max: boolean,
+): PokemonStats {
+  const iv = max ? 31 : 0;
+  const ev = max ? 252 : 0;
+  const nature = max ? 1.1 : 0.9;
+
+  const level = 100;
+
+  const calculatedStats = stats.map((s) => {
+    if (s.stat.name === "hp") {
+      return {
+        name: toTitleCase(s.stat.name),
+        value: Math.floor(
+          ((2 * s.base_stat + iv + ev / 4) * level) / 100 + level + 10,
+        ),
+      };
+    } else {
+      return {
+        name: toTitleCase(s.stat.name),
+        value: Math.floor(
+          (((2 * s.base_stat + iv + ev / 4) * level) / 100 + 5) * nature,
+        ),
+      };
+    }
+  });
+
+  const totalStats = calculatedStats.reduce((total, stat) => total + stat.value, 0)
+
+  return {stats: calculatedStats, totalStats: totalStats};
+}
+
 function getDescriptions(
   flavor_text_entries: PokemonSpeciesFlavorTextEntriesResponse[],
   language: Language,

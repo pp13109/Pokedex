@@ -1,18 +1,21 @@
 "use client";
 
 import { motion } from "motion/react";
-import type { PokemonStat } from "@/features/pokemon/types/pokemon-detail";
+import type { PokemonStats } from "@/features/pokemon/types/pokemon-detail";
 
 type PokemonStatsListProps = {
-  stats: PokemonStat[];
+  stats: PokemonStats;
+  statlimit: number;
+  statLimitTotal: number;
+  bestStatBaseName: string[];
 };
 
 const listVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.05,
-      delayChildren: 0.08,
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
     },
   },
 };
@@ -26,20 +29,15 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.22,
+      duration: 0.25,
     },
   },
 };
 
-export function PokemonStatsList({ stats }: PokemonStatsListProps) {
-  const totalStats = stats.reduce((total, stat) => total + stat.value, 0);
-  const maxStat = stats.reduce((prev, current) =>
-    prev.value > current.value ? prev : current,
-  ).value;
-  
+export function PokemonStatsList({ stats, statlimit, statLimitTotal, bestStatBaseName }: PokemonStatsListProps) {
   const gradientBestStat = "bg-gradient-to-r from-sky-800 to-sky-500";
   const gradientTotal = "bg-gradient-to-r from-emerald-800 to-emerald-500";
-  const gradientMax = "bg-gradient-to-r from-rose-800 to-rose-500";
+  const gradientNormal = "bg-gradient-to-r from-zinc-500 to-zinc-200";
 
   return (
     <motion.ul
@@ -48,7 +46,7 @@ export function PokemonStatsList({ stats }: PokemonStatsListProps) {
       animate="visible"
       className="space-y-3"
     >
-      {stats.map((stat) => (
+      {stats.stats.map((stat) => (
         <motion.li
           key={stat.name}
           variants={itemVariants}
@@ -65,20 +63,27 @@ export function PokemonStatsList({ stats }: PokemonStatsListProps) {
           >
             <motion.div
               initial={{ width: 0 }}
-              animate={{ width: `${(stat.value / 255) * 100}%` }}
-              transition={{
-                duration: 0.45,
-                ease: "easeOut",
+              animate={{
+                width: `${Math.min((stat.value / statlimit) * 100, 100)}%`,
               }}
-              className={`h-full rounded-full ${stat.value >= 255 ? gradientMax : stat.value === maxStat ? gradientBestStat : "bg-zinc-200"}`}
+              transition={{
+                duration: 0.5,
+                ease: "backOut",
+              }}
+              className={`h-full rounded-full ${bestStatBaseName.includes(stat.name) ? gradientBestStat : gradientNormal}`}
             />
           </div>
         </motion.li>
       ))}
-      <motion.li key={totalStats} variants={itemVariants} className="space-y-1">
+
+      <motion.li
+        key="totalStats"
+        variants={itemVariants}
+        className="space-y-1"
+      >
         <div className="flex items-center justify-between text-sm">
           <span className="text-zinc-300">Total</span>
-          <span className="text-zinc-500">{totalStats}</span>
+          <span className="text-zinc-500">{stats.totalStats}</span>
         </div>
 
         <div
@@ -87,12 +92,14 @@ export function PokemonStatsList({ stats }: PokemonStatsListProps) {
         >
           <motion.div
             initial={{ width: 0 }}
-            animate={{ width: `${(totalStats / 680) * 100}%` }}
-            transition={{
-              duration: 0.45,
-              ease: "easeOut",
+            animate={{
+              width: `${Math.min((stats.totalStats / statLimitTotal) * 100, 100)}%`,
             }}
-            className={`h-full rounded-full ${totalStats >= 680 ? gradientMax : gradientTotal}`}
+            transition={{
+              duration: 0.5,
+              ease: "backOut",
+            }}
+            className={`h-full rounded-full ${gradientTotal}`}
           />
         </div>
       </motion.li>

@@ -2,6 +2,7 @@ import {
   getDarkBorderColor,
   getTextTypeColor,
   getTypeColor,
+  PokemonType,
 } from "@/features/pokemon/utils/pokemon-colors";
 
 type PokemonTypeBadgeProps = {
@@ -9,7 +10,7 @@ type PokemonTypeBadgeProps = {
 };
 
 export function PokemonTypeBadge({ type }: PokemonTypeBadgeProps) {
-  const normalizedType = type.toLowerCase();
+  const normalizedType = type.toLowerCase() as PokemonType;
 
   let typeColorBg = getTypeColor(normalizedType, 0.15);
   let typeColorBorder = getTypeColor(normalizedType, 0.3);

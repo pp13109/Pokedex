@@ -1,3 +1,23 @@
+export type PokemonType =
+  | "normal"
+  | "fire"
+  | "water"
+  | "electric"
+  | "grass"
+  | "ice"
+  | "fighting"
+  | "poison"
+  | "ground"
+  | "flying"
+  | "psychic"
+  | "bug"
+  | "rock"
+  | "ghost"
+  | "dragon"
+  | "dark"
+  | "steel"
+  | "fairy";
+
 export const ALPHA_BG = 0.25;
 
 const rawTypeColors: Record<string, string> = {
@@ -42,21 +62,21 @@ const textTypeColors: Record<string, string> = {
   fairy: "rgb(255 204 211)", //#ffccd3 - 200
 };
 
-export function getTypeColor(type: string, alpha = ALPHA_BG): string {
+export function getTypeColor(type: PokemonType, alpha = ALPHA_BG): string {
   const raw = rawTypeColors[type] ?? "255 255 255";
   return `rgb(${raw} / ${alpha})`;
 }
 
-export function getPokemonTypeColors(types: string[], alpha = ALPHA_BG) {
-  const primary = types[0].toLowerCase();
-  const secondary = (types[1] ?? types[0]).toLowerCase();
+export function getPokemonTypeColors(types: PokemonType[], alpha = ALPHA_BG) {
+  const primary = types[0].toLowerCase() as PokemonType;
+  const secondary = (types[1] ?? types[0]).toLowerCase() as PokemonType;
   return {
     typeColor: getTypeColor(primary, alpha),
     typeColor2: getTypeColor(secondary, alpha),
   };
 }
 
-export function getTextTypeColor(type: string): string {
+export function getTextTypeColor(type: PokemonType): string {
   return textTypeColors[type] ?? "rgb(255 255 255)";
 }
 

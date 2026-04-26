@@ -67,7 +67,7 @@ const thumbnailButtonTransition = {
   damping: 24,
 } as const;
 
-function ButtonMotion({
+export function ButtonMotion({
   children,
   onClick,
   className,

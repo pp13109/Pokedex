@@ -10,6 +10,7 @@ import { PokemonDetailImages } from "@/features/pokemon/components/pokemon-detai
 import { AnimatedReveal } from "@/shared/components/animated-reveal";
 import PokedexDescriptions from "@/features/pokemon/components/pokedex-descriptions";
 import { PokemonEvolutionChainList } from "@/features/pokemon/components/pokemon-evolution-chain";
+import PokemonStatsTabs from "@/features/pokemon/components/pokemon-stats-tabs";
 
 type PokemonDetailPageProps = {
   params: Promise<{
@@ -55,7 +56,7 @@ export default async function PokemonDetailPage({
 
     const { typeColor, typeColor2 } = getPokemonTypeColors(pokemon.types);
 
-    const bgGradient = `bg-gradient-to-t from-(--type-color2) via-(--type-color1) to-white/[0.045] from-0% via-40% to-80%`;
+    const bgGradient = `bg-gradient-to-t from-(--type-color2) via-(--type-color1) to-white/5 from-0% via-40% to-80%`;
 
     return (
       <main className="mx-auto min-h-screen max-w-5xl px-6 py-16">
@@ -150,13 +151,11 @@ export default async function PokemonDetailPage({
                   </ul>
                 </section>
 
-                <section className="space-y-4">
-                  <h2 className="text-xl font-semibold tracking-tight">
-                    Stats base
-                  </h2>
-
-                  <PokemonStatsList stats={pokemon.stats} />
-                </section>
+                <PokemonStatsTabs
+                  statsBase={pokemon.statsBase}
+                  statsMin={pokemon.statsMin}
+                  statsMax={pokemon.statsMax}
+                />
               </div>
             </div>
 
