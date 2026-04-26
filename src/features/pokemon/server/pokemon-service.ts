@@ -3,7 +3,14 @@ import {
   mapPokemonToListItem,
 } from "@/features/pokemon/server/pokemon-mappers";
 import { pokeApiFetch } from "@/features/pokemon/server/pokemon-api";
-import type { PokemonDetail } from "@/features/pokemon/types/pokemon-detail";
+import {
+  getEvolutionChain as buildEvolutionChain,
+  enrichChainWithImages,
+} from "@/features/pokemon/server/pokemon-evolution-chain";
+import type {
+  PokemonDetail,
+  PokemonEvolutionChain,
+} from "@/features/pokemon/types/pokemon-detail";
 import type {
   EvolutionChainResponse,
   EvolutionChainEvolvesToResponse,
@@ -66,27 +73,53 @@ export async function getPokemonDetail(name: string): Promise<PokemonDetail> {
         DISPLAY_NAME_LANGUAGE,
       );
 
-  const evolutionChain = await getEvolutionChain(pokemonSpecies.evolution_chain.url);
+  //Evolution chain
+  const formType = classifyVariety(pokemon.name, pokemon.is_default);
+  const isMegaOrGmax = formType.includes("mega") || formType.includes("gmax");
 
-  const chainSpeciesNames = collectChainSpeciesNames(evolutionChain.chain);
-  const chainSpeciesArr = await Promise.all(
-    chainSpeciesNames.map((n) => getPokemonSpeciesByName(n)),
-  );
-  const chainSpeciesVarieties = new Map<string, string[]>();
-  for (let i = 0; i < chainSpeciesNames.length; i++) {
-    chainSpeciesVarieties.set(
-      chainSpeciesNames[i],
-      chainSpeciesArr[i].varieties
-        .filter((v) => !v.is_default && classifyVariety(v.pokemon.name, false).includes("regional"))
-        .map((v) => v.pokemon.name),
+  let finalChain: PokemonEvolutionChain[] = [];
+  if (!isMegaOrGmax) {
+    const evolutionChain = await getEvolutionChain(
+      pokemonSpecies.evolution_chain.url,
     );
+
+    const chainSpeciesNames = collectChainSpeciesNames(evolutionChain.chain);
+    const chainSpeciesArr = await Promise.all(
+      chainSpeciesNames.map((n) => getPokemonSpeciesByName(n)),
+    );
+    const chainSpeciesVarieties = new Map<string, string[]>();
+    for (let i = 0; i < chainSpeciesNames.length; i++) {
+      chainSpeciesVarieties.set(
+        chainSpeciesNames[i],
+        chainSpeciesArr[i].varieties
+          .filter(
+            (v) =>
+              !v.is_default &&
+              classifyVariety(v.pokemon.name, false).includes("regional"),
+          )
+          .map((v) => v.pokemon.name),
+      );
+    }
+
+    const initialChain = buildEvolutionChain(
+      evolutionChain,
+      pokemon.name,
+      pokemon.species.name,
+      chainSpeciesVarieties,
+    );
+    finalChain = await enrichChainWithImages(initialChain);
   }
 
-  return mapPokemonToDetail(pokemon, pokemonSpecies, displayName, evolutionChain, chainSpeciesVarieties);
+  return mapPokemonToDetail(pokemon, pokemonSpecies, displayName, finalChain);
 }
 
-function collectChainSpeciesNames(node: EvolutionChainEvolvesToResponse): string[] {
-  return [node.species.name, ...node.evolves_to.flatMap(collectChainSpeciesNames)];
+function collectChainSpeciesNames(
+  node: EvolutionChainEvolvesToResponse,
+): string[] {
+  return [
+    node.species.name,
+    ...node.evolves_to.flatMap(collectChainSpeciesNames),
+  ];
 }
 
 export async function getPokemonList(
@@ -238,9 +271,7 @@ async function getPokemonFormByName(
   return pokeApiFetch<PokemonFormResponse>(`/pokemon-form/${safeName}`);
 }
 
-async function getEvolutionChain(
-  url: string,
-): Promise<EvolutionChainResponse> {
+async function getEvolutionChain(url: string): Promise<EvolutionChainResponse> {
   return pokeApiFetch<EvolutionChainResponse>(url, true);
 }
 

@@ -1,6 +1,7 @@
 import type {
   PokemonDescriptions,
   PokemonDetail,
+  PokemonEvolutionChain,
 } from "@/features/pokemon/types/pokemon-detail";
 import type {
   PokemonSpeciesFlavorTextEntriesResponse,
@@ -10,14 +11,12 @@ import type {
   PokemonSpeciesResponse,
   PokemonVariety,
   PokemonManualDescriptionEntries,
-  EvolutionChainResponse,
 } from "@/features/pokemon/types/pokemon-api";
 import type { PokemonListItem } from "@/features/pokemon/types/pokemon-list-item";
 import { toTitleCase } from "@/shared/utils/format";
 import regionalDescriptionsRaw from "@/features/pokemon/data/regional-descriptions.json";
 import altFormDescriptionsRaw from "@/features/pokemon/data/alt-form-descriptions.json";
 import { Language, SYSTEM_LANGUAGE } from "@/shared/constants/preferences";
-import { getEvolutionChain } from "@/features/pokemon/server/pokemon-evolution-chain";
 
 /**Export */
 export function mapPokemonToListItem(
@@ -41,8 +40,7 @@ export function mapPokemonToDetail(
   pokemon: PokemonResponse,
   pokemonSpecies: PokemonSpeciesResponse,
   displayName: string,
-  evolutionChain: EvolutionChainResponse,
-  chainSpeciesVarieties: Map<string, string[]>,
+  evolutionChain: PokemonEvolutionChain[],
 ): PokemonDetail {
   return {
     id: pokemon.id,
@@ -72,12 +70,7 @@ export function mapPokemonToDetail(
       name: toTitleCase(item.stat.name),
       value: item.base_stat,
     })),
-    evolutionChain: getEvolutionChain(
-      evolutionChain,
-      pokemon.name,
-      pokemon.species.name,
-      chainSpeciesVarieties,
-    ),
+    evolutionChain,
   };
 }
 

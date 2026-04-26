@@ -17,6 +17,7 @@ export type PokemonEvolutionChain = {
   name: string;
   stage: number;
   condition: string | null;
+  imageUrl: string | null;
 };
 
 export type PokemonDetail = {

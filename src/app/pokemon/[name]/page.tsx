@@ -75,96 +75,103 @@ export default async function PokemonDetailPage({
                 "--type-color2": typeColor2,
               } as React.CSSProperties
             }
-            className={`grid gap-8 rounded-[28px] border border-white/10 ${bgGradient} p-8 shadow-[0_16px_40px_rgba(0,0,0,0.24)] backdrop-blur-xl lg:grid-cols-[320px_1fr]`}
+            className={`flex flex-col gap-8 rounded-[28px] border border-white/10 ${bgGradient} p-8 shadow-[0_16px_40px_rgba(0,0,0,0.24)] backdrop-blur-xl`}
           >
-            <div className="flex flex-col gap-10 min-w-0">
-              <PokemonDetailImages
-                name={pokemon.displayName}
-                imageUrl={pokemon.imageUrl}
-                imageUrlShiny={pokemon.imageUrlShiny}
-              />
+            <div className="grid gap-8 lg:grid-cols-[320px_1fr]">
+              <div className="flex flex-col gap-10 min-w-0">
+                <PokemonDetailImages
+                  name={pokemon.displayName}
+                  imageUrl={pokemon.imageUrl}
+                  imageUrlShiny={pokemon.imageUrlShiny}
+                />
 
-              <PokedexDescriptions pokemon={pokemon} />
-            </div>
+                <PokedexDescriptions pokemon={pokemon} />
+              </div>
 
-            <div className="space-y-4">
-              <section className="space-y-4">
-                <p className="text-sm text-zinc-400">
-                  #{pokemon.pokedexNumber.toString().padStart(4, "0")}
-                </p>
+              <div className="space-y-4">
+                <section className="space-y-4">
+                  <p className="text-sm text-zinc-400">
+                    #{pokemon.pokedexNumber.toString().padStart(4, "0")}
+                  </p>
 
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                  {pokemon.displayName}
-                </h1>
+                  <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                    {pokemon.displayName}
+                  </h1>
 
-                <div className="flex flex-col sm:flex-row justify-between gap-6">
-                  <ul
-                    className="flex flex-wrap gap-2"
-                    aria-label={`Tipos de ${pokemon.displayName}`}
-                  >
-                    {pokemon.types.map((type) => (
-                      <li key={type}>
-                        <PokemonTypeBadge type={type} />
+                  <div className="flex flex-col sm:flex-row justify-between gap-6">
+                    <ul
+                      className="flex flex-wrap gap-2"
+                      aria-label={`Tipos de ${pokemon.displayName}`}
+                    >
+                      {pokemon.types.map((type) => (
+                        <li key={type}>
+                          <PokemonTypeBadge type={type} />
+                        </li>
+                      ))}
+                    </ul>
+
+                    <section className="flex justify-evenly gap-4">
+                      <div className="rounded-3xl border border-white/10 bg-black/20 px-5 py-2 w-fit flex items-end gap-2">
+                        <p className="text-sm text-zinc-500">Altura</p>
+                        <p className="text-l font-semibold">
+                          {pokemon.heightMeters} m
+                        </p>
+                      </div>
+
+                      <div className="rounded-3xl border border-white/10 bg-black/20 px-5 py-2 w-fit flex items-end gap-2">
+                        <p className="text-sm text-zinc-500">Peso</p>
+                        <p className="text-l font-semibold">
+                          {pokemon.weightKg} kg
+                        </p>
+                      </div>
+                    </section>
+                  </div>
+                </section>
+
+                <section className="space-y-4">
+                  <h2 className="text-xl font-semibold tracking-tight">
+                    Habilidades
+                  </h2>
+
+                  <ul className="grid gap-3 sm:grid-cols-2">
+                    {pokemon.abilities.map((ability) => (
+                      <li
+                        key={`${ability.name}-${ability.isHidden ? "hidden" : "normal"}`}
+                        className="rounded-3xl border border-white/10 bg-black/20 p-4"
+                      >
+                        <p className="font-medium">{ability.name}</p>
+                        <p className="mt-1 text-sm text-zinc-400">
+                          {ability.isHidden
+                            ? "Habilidad oculta"
+                            : "Habilidad normal"}
+                        </p>
                       </li>
                     ))}
                   </ul>
+                </section>
 
-                  <section className="flex justify-evenly gap-4">
-                    <div className="rounded-3xl border border-white/10 bg-black/20 px-5 py-2 w-fit flex items-end gap-2">
-                      <p className="text-sm text-zinc-500">Altura</p>
-                      <p className="text-l font-semibold">
-                        {pokemon.heightMeters} m
-                      </p>
-                    </div>
+                <section className="space-y-4">
+                  <h2 className="text-xl font-semibold tracking-tight">
+                    Stats base
+                  </h2>
 
-                    <div className="rounded-3xl border border-white/10 bg-black/20 px-5 py-2 w-fit flex items-end gap-2">
-                      <p className="text-sm text-zinc-500">Peso</p>
-                      <p className="text-l font-semibold">
-                        {pokemon.weightKg} kg
-                      </p>
-                    </div>
-                  </section>
-                </div>
-              </section>
+                  <PokemonStatsList stats={pokemon.stats} />
+                </section>
+              </div>
+            </div>
 
-              <section className="space-y-4">
-                <h2 className="text-xl font-semibold tracking-tight">
-                  Habilidades
-                </h2>
-
-                <ul className="grid gap-3 sm:grid-cols-2">
-                  {pokemon.abilities.map((ability) => (
-                    <li
-                      key={`${ability.name}-${ability.isHidden ? "hidden" : "normal"}`}
-                      className="rounded-3xl border border-white/10 bg-black/20 p-4"
-                    >
-                      <p className="font-medium">{ability.name}</p>
-                      <p className="mt-1 text-sm text-zinc-400">
-                        {ability.isHidden
-                          ? "Habilidad oculta"
-                          : "Habilidad normal"}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="text-xl font-semibold tracking-tight">
-                  Stats base
-                </h2>
-
-                <PokemonStatsList stats={pokemon.stats} />
-              </section>
-
+            {pokemon.evolutionChain.length > 1 && (
               <section className="space-y-4">
                 <h2 className="text-xl font-semibold tracking-tight">
                   Evoluciones
                 </h2>
 
-                <PokemonEvolutionChainList evolutionChain={pokemon.evolutionChain} />
+                <PokemonEvolutionChainList
+                  evolutionChain={pokemon.evolutionChain}
+                  activePokemon={pokemon.name}
+                />
               </section>
-            </div>
+            )}
           </article>
         </AnimatedReveal>
       </main>
