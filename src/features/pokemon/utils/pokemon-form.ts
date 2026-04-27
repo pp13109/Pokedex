@@ -1,4 +1,7 @@
-import type { PokemonFormType, PokemonVariety } from "@/features/pokemon/types/pokemon-api";
+import type {
+  PokemonFormType,
+  PokemonVariety,
+} from "@/features/pokemon/types/pokemon-api";
 
 const POKEMON_REGIONAL_FORMS = ["alola", "galar", "hisui", "paldea"];
 
@@ -66,16 +69,18 @@ const POKEMON_OTHER_FORMS = {
 };
 
 const regionalFormsRegex = new RegExp(`-(${POKEMON_REGIONAL_FORMS.join("|")})`);
-const otherFormsRegex = new RegExp(`^(${POKEMON_OTHER_FORMS.extra.join("|")})$`);
+const otherFormsRegex = new RegExp(
+  `^(${POKEMON_OTHER_FORMS.extra.join("|")})$`,
+);
 const otherFormsFemaleRegex = new RegExp(`(${POKEMON_OTHER_FORMS.female})$`);
 const otherFormsTotemRegex = new RegExp(`(${POKEMON_OTHER_FORMS.totem})`);
 
-export function classifyVariety(name: string, isDefault: boolean): PokemonFormType[] {
+export function classifyVariety(
+  name: string,
+  isDefault: boolean,
+): PokemonFormType[] {
   if (isDefault) return ["default"];
-  if (
-    otherFormsRegex.test(name) ||
-    otherFormsTotemRegex.test(name)
-  )
+  if (otherFormsRegex.test(name) || otherFormsTotemRegex.test(name))
     return ["other"];
 
   const types: PokemonFormType[] = [];

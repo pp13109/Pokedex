@@ -34,6 +34,12 @@ export type PokemonVariety = {
 };
 
 /**Pokemon */
+export type PokemonStatsResponse = {
+  base_stat: number;
+  effort: number;
+  stat: NamedApiResource;
+};
+
 export type PokemonResponse = {
   id: number;
   name: string;
@@ -46,11 +52,7 @@ export type PokemonResponse = {
     slot: number;
     ability: NamedApiResource;
   }>;
-  stats: Array<{
-    base_stat: number;
-    effort: number;
-    stat: NamedApiResource;
-  }>;
+  stats: PokemonStatsResponse[];
   types: Array<{
     slot: number;
     type: NamedApiResource;

@@ -1,4 +1,5 @@
-import { PokemonFormType } from "./pokemon-api";
+import { PokemonType } from "@/features/pokemon/utils/pokemon-colors";
+import { PokemonFormType } from "@/features/pokemon/types/pokemon-api";
 
 export type PokemonListItem = {
   id: number;
@@ -7,5 +8,5 @@ export type PokemonListItem = {
   pokedexNumber: number;
   forms: PokemonFormType[];
   imageUrl: string | null;
-  types: string[];
+  types: PokemonType[];
 };

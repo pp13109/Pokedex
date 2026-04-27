@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { MdFilterAlt, MdFilterAltOff } from "react-icons/md";
+import { MdFilterAlt } from "react-icons/md";
 
 type FilterKey = "mega" | "gmax" | "regional";
 
@@ -41,10 +41,10 @@ export function PokedexFilters() {
   }
 
   function getActiveFilterCount() {
-    let activeFilter = 0
+    let activeFilter = 0;
     if (searchParams.toString().includes("mega=")) activeFilter++;
-    if(searchParams.toString().includes("gmax=")) activeFilter++;
-    if(searchParams.toString().includes("regional=")) activeFilter++;
+    if (searchParams.toString().includes("gmax=")) activeFilter++;
+    if (searchParams.toString().includes("regional=")) activeFilter++;
 
     return activeFilter;
   }
@@ -75,30 +75,33 @@ export function PokedexFilters() {
           })}
 
           {getActiveFilterCount() > 0 && (
-              <motion.div
-                id="search_clear_button"
-                layout
-                initial={{
-                  opacity: 0,
-                  y: 5,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeIn",
-                }}
-                className="cursor-pointer text-zinc-300 hover:text-zinc-500 active:text-zinc-400 uppercase"
+            <motion.div
+              id="search_clear_button"
+              layout
+              initial={{
+                opacity: 0,
+                y: 5,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.3,
+                ease: "easeIn",
+              }}
+              className="cursor-pointer text-zinc-300 hover:text-zinc-500 active:text-zinc-400 uppercase"
+            >
+              <Link
+                href={clearFilters()}
+                scroll={false}
+                className="text-xs flex items-center"
               >
-                <Link href={clearFilters()} scroll={false} className="text-xs flex items-center">
-                  <MdFilterAlt className="text-xl"/>
-                  ({getActiveFilterCount()})
-                  Limpiar
-                </Link>
-              </motion.div>
-            )}
+                <MdFilterAlt className="text-xl" />({getActiveFilterCount()})
+                Limpiar
+              </Link>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>

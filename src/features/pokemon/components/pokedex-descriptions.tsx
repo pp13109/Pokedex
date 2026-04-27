@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode, useState } from "react";
-import { PokemonDetail } from "../types/pokemon-detail";
+import { PokemonDetail } from "@/features/pokemon/types/pokemon-detail";
 import { motion } from "motion/react";
 
 type DescriptionProps = {
@@ -67,7 +67,7 @@ const thumbnailButtonTransition = {
   damping: 24,
 } as const;
 
-function ButtonMotion({
+export function ButtonMotion({
   children,
   onClick,
   className,

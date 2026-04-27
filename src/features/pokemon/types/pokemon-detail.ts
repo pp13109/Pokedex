@@ -1,3 +1,5 @@
+import { PokemonType } from "@/features/pokemon/utils/pokemon-colors";
+
 export type PokemonAbility = {
   name: string;
   isHidden: boolean;
@@ -6,6 +8,11 @@ export type PokemonAbility = {
 export type PokemonStat = {
   name: string;
   value: number;
+};
+
+export type PokemonStats = {
+  stats: PokemonStat[];
+  totalStats: number;
 };
 
 export type PokemonDescriptions = {
@@ -17,6 +24,7 @@ export type PokemonEvolutionChain = {
   name: string;
   stage: number;
   condition: string | null;
+  imageUrl: string | null;
 };
 
 export type PokemonDetail = {
@@ -29,10 +37,22 @@ export type PokemonDetail = {
   descriptions: PokemonDescriptions[];
   imageUrl: string | null;
   imageUrlShiny: string | null;
-  types: string[];
+  types: PokemonType[];
   heightMeters: number;
   weightKg: number;
   abilities: PokemonAbility[];
-  stats: PokemonStat[];
+  statsBase: PokemonStats;
+  statsMin: PokemonStats;
+  statsMax: PokemonStats;
   evolutionChain: PokemonEvolutionChain[];
+};
+
+/**Pokemon Adjacent */
+export type PokemonAdjacent = {
+  id: number;
+  name: string;
+  displayName: string;
+  pokedexNumber: number;
+  imageUrl: string | null;
+  types: PokemonType[];
 };
