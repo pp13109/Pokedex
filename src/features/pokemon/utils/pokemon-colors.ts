@@ -71,7 +71,7 @@ export function getPokemonTypeColors(types: PokemonType[], alpha = ALPHA_BG) {
   const primary = types[0].toLowerCase() as PokemonType;
   const secondary = (types[1] ?? types[0]).toLowerCase() as PokemonType;
   return {
-    typeColor: getTypeColor(primary, alpha),
+    typeColor1: getTypeColor(primary, alpha),
     typeColor2: getTypeColor(secondary, alpha),
   };
 }

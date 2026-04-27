@@ -37,11 +37,12 @@ async function getHomeView(
     filterRegional: boolean;
   },
 ): Promise<ListHomeView> {
-  const { totalItems, totalPages, currentPage, fullListItems, results } = await getPokemonList({
-    query,
-    page: requestedPage,
-    filters,
-  });
+  const { totalItems, totalPages, currentPage, fullListItems, results } =
+    await getPokemonList({
+      query,
+      page: requestedPage,
+      filters,
+    });
 
   return { query, totalItems, totalPages, currentPage, fullListItems, results };
 }
@@ -70,7 +71,7 @@ function HomePageHeader() {
               Pokédex
             </h1>
             <span className="inline-flex rounded-full border border-indigo-400/20 bg-indigo-400/10 px-2 mb-1.5 text-xs lg:text-sm text-indigo-200">
-              v 2.0
+              v 2.1
             </span>
           </div>
 
@@ -85,7 +86,8 @@ function HomePageHeader() {
 }
 
 function HomePagePokemonList({ view }: { view: ListHomeView }) {
-  const { query, totalItems,totalPages, currentPage, fullListItems, results } = view;
+  const { query, totalItems, totalPages, currentPage, fullListItems, results } =
+    view;
 
   return (
     <HomePageShell>

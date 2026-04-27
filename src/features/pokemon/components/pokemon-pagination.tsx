@@ -22,8 +22,7 @@ export function PokemonPagination({
 
     if (page > 1) {
       params.set("page", String(page));
-    }
-    else {
+    } else {
       params.delete("page");
     }
 

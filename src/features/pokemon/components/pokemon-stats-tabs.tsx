@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { PokemonStatsList } from "./pokemon-stats-list";
-import { PokemonStats } from "../types/pokemon-detail";
+import { PokemonStatsList } from "@/features/pokemon/components/pokemon-stats-list";
+import { PokemonStats } from "@/features/pokemon/types/pokemon-detail";
 import { motion } from "motion/react";
 
 type PokemonStatsTabsProps = {
@@ -53,7 +53,7 @@ export default function PokemonStatsTabs({
                   layoutId="tab-indicator"
                   transition={{
                     ease: "backOut",
-                    duration: 0.3
+                    duration: 0.3,
                   }}
                   className={`absolute bottom-0 left-0 right-0 h-1 rounded-full bg-white/50`}
                 />

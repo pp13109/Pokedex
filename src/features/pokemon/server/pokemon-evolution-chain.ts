@@ -19,7 +19,9 @@ function getRegionalSuffix(name: string): string | null {
   return REGIONAL_SUFFIXES.find((r) => name.endsWith(`-${r}`)) ?? null;
 }
 
-function getDetailSourceSuffix(d: EvolutionChainDetailsResponse): string | null {
+function getDetailSourceSuffix(
+  d: EvolutionChainDetailsResponse,
+): string | null {
   return d.base_form ? getRegionalSuffix(d.base_form.name) : null;
 }
 
@@ -30,10 +32,14 @@ function getDetailResultSuffix(
 ): string | null {
   const candidate =
     (d.location && REGIONAL_LOCATIONS[d.location.name]) ??
-    (d.region && REGIONAL_SUFFIXES.includes(d.region.name) ? d.region.name : null) ??
+    (d.region && REGIONAL_SUFFIXES.includes(d.region.name)
+      ? d.region.name
+      : null) ??
     (d.base_form && getRegionalSuffix(d.base_form.name));
   if (!candidate) return null;
-  return speciesVarieties.includes(`${speciesName}-${candidate}`) ? candidate : null;
+  return speciesVarieties.includes(`${speciesName}-${candidate}`)
+    ? candidate
+    : null;
 }
 
 function findPathToSpecies(
@@ -55,7 +61,8 @@ function findRegionalSuffixInChain(
   if (node.species.name === speciesName) {
     if (node.evolution_details.some((d) => d.base_form === null)) return null;
     for (const detail of node.evolution_details) {
-      const suffix = detail.base_form && getRegionalSuffix(detail.base_form.name);
+      const suffix =
+        detail.base_form && getRegionalSuffix(detail.base_form.name);
       if (suffix) return suffix;
     }
     return null;
@@ -90,14 +97,18 @@ export function getEvolutionChain(
     getRegionalSuffix(currentName) ??
     findRegionalSuffixInChain(evolutionChain.chain, currentSpeciesName);
   const hasRegionalForm =
-    regionalSuffix !== null && chainHasRegionalForm(evolutionChain.chain, regionalSuffix);
-  const pathToCurrent = findPathToSpecies(evolutionChain.chain, currentSpeciesName);
+    regionalSuffix !== null &&
+    chainHasRegionalForm(evolutionChain.chain, regionalSuffix);
+  const pathToCurrent = findPathToSpecies(
+    evolutionChain.chain,
+    currentSpeciesName,
+  );
   const pathSpeciesSet = new Set(
     (pathToCurrent ?? [evolutionChain.chain]).map((n) => n.species.name),
   );
-  const currentHasRegionalVariety = (chainSpeciesVarieties.get(currentSpeciesName) ?? []).some(
-    (v) => getRegionalSuffix(v) !== null,
-  );
+  const currentHasRegionalVariety = (
+    chainSpeciesVarieties.get(currentSpeciesName) ?? []
+  ).some((v) => getRegionalSuffix(v) !== null);
   return collectEvolutions(
     evolutionChain.chain,
     null,
@@ -128,7 +139,8 @@ function collectEvolutions(
 ): PokemonEvolutionChain[] {
   const isRoot = node.evolution_details.length === 0;
   const isCurrentSpecies = node.species.name === currentSpeciesName;
-  const isAncestor = !isCurrentSpecies && !pastCurrent && pathSpeciesSet.has(node.species.name);
+  const isAncestor =
+    !isCurrentSpecies && !pastCurrent && pathSpeciesSet.has(node.species.name);
   const isOnPathOrDescendant = isCurrentSpecies || isAncestor || pastCurrent;
 
   if (!isOnPathOrDescendant) return [];
@@ -154,7 +166,8 @@ function collectEvolutions(
     );
 
   const speciesHasRegionalSuffix =
-    !!regionalSuffix && nodeVarieties.includes(`${node.species.name}-${regionalSuffix}`);
+    !!regionalSuffix &&
+    nodeVarieties.includes(`${node.species.name}-${regionalSuffix}`);
 
   if (isRoot) {
     const name = isCurrentSpecies
@@ -175,7 +188,9 @@ function collectEvolutions(
       (sib) =>
         sib !== node &&
         sib.evolution_details.some(
-          (d) => d.base_form && getRegionalSuffix(d.base_form.name) === regionalSuffix,
+          (d) =>
+            d.base_form &&
+            getRegionalSuffix(d.base_form.name) === regionalSuffix,
         ),
     );
 
@@ -192,15 +207,24 @@ function collectEvolutions(
 
   if (sourceApplicable.length === 0) return [];
 
-  const hasMultipleForms = sourceApplicable.length < node.evolution_details.length;
+  const hasMultipleForms =
+    sourceApplicable.length < node.evolution_details.length;
 
   if (isCurrentSpecies) {
     const matchingResult = sourceApplicable.filter(
-      (d) => getDetailResultSuffix(d, node.species.name, nodeVarieties) === regionalSuffix,
+      (d) =>
+        getDetailResultSuffix(d, node.species.name, nodeVarieties) ===
+        regionalSuffix,
     );
-    const details = matchingResult.length > 0 ? matchingResult : sourceApplicable;
+    const details =
+      matchingResult.length > 0 ? matchingResult : sourceApplicable;
     return [
-      { name: currentName, stage, condition: formatEvolutionCondition(details), imageUrl: null },
+      {
+        name: currentName,
+        stage,
+        condition: formatEvolutionCondition(details),
+        imageUrl: null,
+      },
       ...recurse(),
     ];
   }
@@ -224,12 +248,22 @@ function collectEvolutions(
     ) {
       name = `${node.species.name}-${regionalSuffix}`;
     }
-    return { name, stage, condition: formatEvolutionCondition(details), imageUrl: null };
+    return {
+      name,
+      stage,
+      condition: formatEvolutionCondition(details),
+      imageUrl: null,
+    };
   });
 
   if (isAncestor) {
-    const exact = entries.filter((e) => getRegionalSuffix(e.name) === regionalSuffix);
-    entries = exact.length > 0 ? exact : entries.filter((e) => getRegionalSuffix(e.name) === null);
+    const exact = entries.filter(
+      (e) => getRegionalSuffix(e.name) === regionalSuffix,
+    );
+    entries =
+      exact.length > 0
+        ? exact
+        : entries.filter((e) => getRegionalSuffix(e.name) === null);
     return [...entries, ...recurse()];
   }
 
@@ -255,7 +289,9 @@ function collectEvolutions(
           (d.region && d.region.name === suffix) ||
           (d.location && REGIONAL_LOCATIONS[d.location.name] === suffix),
       );
-      const conditionDetails = matchingDetail ? [matchingDetail] : sourceApplicable;
+      const conditionDetails = matchingDetail
+        ? [matchingDetail]
+        : sourceApplicable;
       return {
         name: v,
         stage,
@@ -267,7 +303,9 @@ function collectEvolutions(
   return [...entries, ...extraVarietyEntries, ...recurse()];
 }
 
-function formatEvolutionCondition(details: EvolutionChainDetailsResponse[]): string | null {
+function formatEvolutionCondition(
+  details: EvolutionChainDetailsResponse[],
+): string | null {
   if (details.length === 0) return null;
   return details.map(formatSingleCondition).join(" or ");
 }
@@ -281,14 +319,19 @@ function formatSingleCondition(d: EvolutionChainDetailsResponse): string {
       else if (d.min_happiness) parts.push("High Friendship");
       else if (d.min_beauty) parts.push("High Beauty");
       else if (d.min_affection) parts.push("High Affection");
-      else if (d.known_move) parts.push(`Knowing ${toTitleCase(d.known_move.name)}`);
+      else if (d.known_move)
+        parts.push(`Knowing ${toTitleCase(d.known_move.name)}`);
       else if (d.known_move_type)
-        parts.push(`Knowing a ${toTitleCase(d.known_move_type.name)}-type move`);
+        parts.push(
+          `Knowing a ${toTitleCase(d.known_move_type.name)}-type move`,
+        );
       else parts.push("Level up");
 
       if (d.relative_physical_stats === 1) parts.push("(Attack > Defense)");
-      else if (d.relative_physical_stats === -1) parts.push("(Defense > Attack)");
-      else if (d.relative_physical_stats === 0) parts.push("(Attack = Defense)");
+      else if (d.relative_physical_stats === -1)
+        parts.push("(Defense > Attack)");
+      else if (d.relative_physical_stats === 0)
+        parts.push("(Attack = Defense)");
 
       if (d.time_of_day === "day") parts.push("during the day");
       else if (d.time_of_day === "night") parts.push("at night");
@@ -297,8 +340,10 @@ function formatSingleCondition(d: EvolutionChainDetailsResponse): string {
       if (d.location) parts.push(`at ${toTitleCase(d.location.name)}`);
       if (d.region) parts.push(`in ${toTitleCase(d.region.name)}`);
       if (d.held_item) parts.push(`holding ${toTitleCase(d.held_item.name)}`);
-      if (d.party_species) parts.push(`with ${toTitleCase(d.party_species.name)} in party`);
-      if (d.party_type) parts.push(`with a ${toTitleCase(d.party_type.name)}-type in party`);
+      if (d.party_species)
+        parts.push(`with ${toTitleCase(d.party_species.name)} in party`);
+      if (d.party_type)
+        parts.push(`with a ${toTitleCase(d.party_type.name)}-type in party`);
       if (d.min_steps) parts.push(`after walking ${d.min_steps} steps with it`);
       if (d.needs_overworld_rain) parts.push("while raining");
       if (d.turn_upside_down) parts.push("(turn console upside down)");
@@ -315,8 +360,10 @@ function formatSingleCondition(d: EvolutionChainDetailsResponse): string {
       break;
     }
     case "trade": {
-      if (d.held_item) parts.push(`Trade holding ${toTitleCase(d.held_item.name)}`);
-      else if (d.trade_species) parts.push(`Trade for ${toTitleCase(d.trade_species.name)}`);
+      if (d.held_item)
+        parts.push(`Trade holding ${toTitleCase(d.held_item.name)}`);
+      else if (d.trade_species)
+        parts.push(`Trade for ${toTitleCase(d.trade_species.name)}`);
       else parts.push("Trade");
       break;
     }
@@ -331,7 +378,9 @@ function formatSingleCondition(d: EvolutionChainDetailsResponse): string {
       break;
     case "take-damage": {
       const damage = d.min_damage_taken ?? 49;
-      parts.push(`Lose ${damage}+ HP without fainting, then walk under the stone arch`);
+      parts.push(
+        `Lose ${damage}+ HP without fainting, then walk under the stone arch`,
+      );
       break;
     }
     case "tower-of-darkness":
@@ -375,7 +424,9 @@ export async function enrichChainWithImages(
     chain.map(async (entry) => {
       try {
         const safeName = encodeURIComponent(normalizePokemonName(entry.name));
-        const pokemon = await pokeApiFetch<PokemonResponse>(`/pokemon/${safeName}`);
+        const pokemon = await pokeApiFetch<PokemonResponse>(
+          `/pokemon/${safeName}`,
+        );
         return { ...entry, imageUrl: getEvolutionImageUrl(pokemon) };
       } catch {
         return entry;

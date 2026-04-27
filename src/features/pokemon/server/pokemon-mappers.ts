@@ -1,4 +1,5 @@
 import type {
+  PokemonAdjacent,
   PokemonDescriptions,
   PokemonDetail,
   PokemonEvolutionChain,
@@ -19,7 +20,7 @@ import { toTitleCase } from "@/shared/utils/format";
 import regionalDescriptionsRaw from "@/features/pokemon/data/regional-descriptions.json";
 import altFormDescriptionsRaw from "@/features/pokemon/data/alt-form-descriptions.json";
 import { Language, SYSTEM_LANGUAGE } from "@/shared/constants/preferences";
-import { PokemonType } from "../utils/pokemon-colors";
+import { PokemonType } from "@/features/pokemon/utils/pokemon-colors";
 
 /**Export */
 export function mapPokemonToListItem(
@@ -35,7 +36,9 @@ export function mapPokemonToListItem(
       pokemonVariety.speciesId,
     forms: pokemonVariety.formType,
     imageUrl: getPokemonImageUrl(pokemon, false),
-    types: sortBySlot(pokemon.types).map((item) => toTitleCase(item.type.name) as PokemonType),
+    types: sortBySlot(pokemon.types).map(
+      (item) => toTitleCase(item.type.name) as PokemonType,
+    ),
   };
 }
 
@@ -60,7 +63,9 @@ export function mapPokemonToDetail(
     ),
     imageUrl: getPokemonImageUrl(pokemon, false),
     imageUrlShiny: getPokemonImageUrl(pokemon, true),
-    types: sortBySlot(pokemon.types).map((item) => toTitleCase(item.type.name) as PokemonType),
+    types: sortBySlot(pokemon.types).map(
+      (item) => toTitleCase(item.type.name) as PokemonType,
+    ),
     heightMeters: pokemon.height / 10,
     weightKg: pokemon.weight / 10,
     abilities: [...pokemon.abilities]
@@ -74,11 +79,32 @@ export function mapPokemonToDetail(
         name: toTitleCase(item.stat.name),
         value: item.base_stat,
       })),
-      totalStats: pokemon.stats.reduce((total, stat) => total + stat.base_stat, 0),
+      totalStats: pokemon.stats.reduce(
+        (total, stat) => total + stat.base_stat,
+        0,
+      ),
     },
     statsMin: getCalculatedMinMaxStats(pokemon.stats, false),
     statsMax: getCalculatedMinMaxStats(pokemon.stats, true),
     evolutionChain,
+  };
+}
+
+export function mapPokemonToAdjacent(
+  pokemon: PokemonResponse,
+  pokemonSpecies: PokemonSpeciesResponse,
+  displayName: string,
+): PokemonAdjacent {
+  return {
+    id: pokemon.id,
+    name: pokemon.name,
+    displayName: displayName,
+    pokedexNumber:
+      getPokedexNumber(pokemonSpecies.pokedex_numbers) ?? pokemonSpecies.id,
+    imageUrl: getPokemonImageUrl(pokemon, false),
+    types: sortBySlot(pokemon.types).map(
+      (item) => toTitleCase(item.type.name) as PokemonType,
+    ),
   };
 }
 
@@ -111,9 +137,12 @@ function getCalculatedMinMaxStats(
     }
   });
 
-  const totalStats = calculatedStats.reduce((total, stat) => total + stat.value, 0)
+  const totalStats = calculatedStats.reduce(
+    (total, stat) => total + stat.value,
+    0,
+  );
 
-  return {stats: calculatedStats, totalStats: totalStats};
+  return { stats: calculatedStats, totalStats: totalStats };
 }
 
 function getDescriptions(

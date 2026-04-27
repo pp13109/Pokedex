@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode, useState } from "react";
-import { PokemonDetail } from "../types/pokemon-detail";
+import { PokemonDetail } from "@/features/pokemon/types/pokemon-detail";
 import { motion } from "motion/react";
 
 type DescriptionProps = {

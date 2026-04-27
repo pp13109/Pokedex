@@ -17,7 +17,7 @@ export function PokemonTypeBadge({ type }: PokemonTypeBadgeProps) {
   let typeColorText = getTextTypeColor(normalizedType);
 
   if (normalizedType === "dark") {
-    typeColorBg = getTypeColor(normalizedType, 0.60);
+    typeColorBg = getTypeColor(normalizedType, 0.6);
     typeColorBorder = getDarkBorderColor();
   }
 

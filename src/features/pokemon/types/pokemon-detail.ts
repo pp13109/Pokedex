@@ -1,4 +1,4 @@
-import { PokemonType } from "../utils/pokemon-colors";
+import { PokemonType } from "@/features/pokemon/utils/pokemon-colors";
 
 export type PokemonAbility = {
   name: string;
@@ -45,4 +45,14 @@ export type PokemonDetail = {
   statsMin: PokemonStats;
   statsMax: PokemonStats;
   evolutionChain: PokemonEvolutionChain[];
+};
+
+/**Pokemon Adjacent */
+export type PokemonAdjacent = {
+  id: number;
+  name: string;
+  displayName: string;
+  pokedexNumber: number;
+  imageUrl: string | null;
+  types: PokemonType[];
 };

@@ -1,5 +1,5 @@
-import { PokemonType } from "../utils/pokemon-colors";
-import { PokemonFormType } from "./pokemon-api";
+import { PokemonType } from "@/features/pokemon/utils/pokemon-colors";
+import { PokemonFormType } from "@/features/pokemon/types/pokemon-api";
 
 export type PokemonListItem = {
   id: number;

@@ -4,13 +4,14 @@ import { notFound } from "next/navigation";
 import { PokeApiNotFoundError } from "@/features/pokemon/server/pokemon-api";
 import { getPokemonDetail } from "@/features/pokemon/server/pokemon-service";
 import { PokemonTypeBadge } from "@/features/pokemon/components/pokemon-type-badge";
-import { PokemonStatsList } from "@/features/pokemon/components/pokemon-stats-list";
 import { getPokemonTypeColors } from "@/features/pokemon/utils/pokemon-colors";
 import { PokemonDetailImages } from "@/features/pokemon/components/pokemon-detail-images";
 import { AnimatedReveal } from "@/shared/components/animated-reveal";
 import PokedexDescriptions from "@/features/pokemon/components/pokedex-descriptions";
 import { PokemonEvolutionChainList } from "@/features/pokemon/components/pokemon-evolution-chain";
 import PokemonStatsTabs from "@/features/pokemon/components/pokemon-stats-tabs";
+import PokemonAdjacentNav from "@/features/pokemon/components/pokemon-adjacent-nav";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 type PokemonDetailPageProps = {
   params: Promise<{
@@ -54,7 +55,7 @@ export default async function PokemonDetailPage({
   try {
     const pokemon = await getPokemonDetail(name);
 
-    const { typeColor, typeColor2 } = getPokemonTypeColors(pokemon.types);
+    const { typeColor1, typeColor2 } = getPokemonTypeColors(pokemon.types);
 
     const bgGradient = `bg-gradient-to-t from-(--type-color2) via-(--type-color1) to-white/5 from-0% via-40% to-80%`;
 
@@ -65,14 +66,17 @@ export default async function PokemonDetailPage({
             href={backHref}
             className="text-sm text-zinc-400 transition hover:text-zinc-200"
           >
-            ← Volver a la Pokédex
+            <div className="flex flex-row gap-2 items-center font-semibold tracking-wide border border-white/10 bg-black/20 w-fit px-5 py-2 rounded-full backdrop-blur-2xl">
+              <FaArrowLeftLong />
+              <span>Volver a la Pokédex</span>
+            </div>
           </Link>
         </div>
         <AnimatedReveal>
           <article
             style={
               {
-                "--type-color1": typeColor,
+                "--type-color1": typeColor1,
                 "--type-color2": typeColor2,
               } as React.CSSProperties
             }
@@ -172,6 +176,19 @@ export default async function PokemonDetailPage({
               </section>
             )}
           </article>
+
+          <section className="grid grid-cols-2 gap-4 sm:gap-10 mt-10">
+            {pokemon.pokedexNumber > 1 ? (
+              <PokemonAdjacentNav pokemonId={pokemon.pokedexNumber - 1} />
+            ) : (
+              <div />
+            )}
+            {pokemon.pokedexNumber < 1025 ? (
+              <PokemonAdjacentNav pokemonId={pokemon.pokedexNumber + 1} />
+            ) : (
+              <div />
+            )}
+          </section>
         </AnimatedReveal>
       </main>
     );

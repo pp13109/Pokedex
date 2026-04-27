@@ -1,4 +1,5 @@
 import {
+  mapPokemonToAdjacent,
   mapPokemonToDetail,
   mapPokemonToListItem,
 } from "@/features/pokemon/server/pokemon-mappers";
@@ -113,15 +114,6 @@ export async function getPokemonDetail(name: string): Promise<PokemonDetail> {
   return mapPokemonToDetail(pokemon, pokemonSpecies, displayName, finalChain);
 }
 
-function collectChainSpeciesNames(
-  node: EvolutionChainEvolvesToResponse,
-): string[] {
-  return [
-    node.species.name,
-    ...node.evolves_to.flatMap(collectChainSpeciesNames),
-  ];
-}
-
 export async function getPokemonList(
   options: GetPokemonListOptions = {},
 ): Promise<PokemonListResult> {
@@ -174,6 +166,19 @@ export async function getPokemonList(
       mapPokemonToListItem(pokemon, pokemonVariety),
     ),
   };
+}
+
+export async function getPokemonAdjacent(id: number) {
+  const pokemon = await getPokemonById(id);
+  const pokemonSpecies = await getPokemonSpeciesByName(pokemon.species.name);
+  console.log("pokemonSpecies", pokemonSpecies);
+  const displayName = getDisplayName(
+    pokemonSpecies.names,
+    pokemon.name,
+    DISPLAY_NAME_LANGUAGE,
+  );
+
+  return mapPokemonToAdjacent(pokemon, pokemonSpecies, displayName);
 }
 
 /**Main */
@@ -253,6 +258,10 @@ async function getPokemonByName(name: string): Promise<PokemonResponse> {
   return pokeApiFetch<PokemonResponse>(`/pokemon/${safeName}`);
 }
 
+async function getPokemonById(id: number): Promise<PokemonResponse> {
+  return pokeApiFetch<PokemonResponse>(`/pokemon/${id}`);
+}
+
 async function getPokemonSpeciesByName(
   name: string,
 ): Promise<PokemonSpeciesResponse> {
@@ -298,4 +307,14 @@ function getDisplayName(
   return language === "es"
     ? displayName.replace("Gmax", "Gigamax")
     : displayName;
+}
+
+/**Evolution chain */
+function collectChainSpeciesNames(
+  node: EvolutionChainEvolvesToResponse,
+): string[] {
+  return [
+    node.species.name,
+    ...node.evolves_to.flatMap(collectChainSpeciesNames),
+  ];
 }

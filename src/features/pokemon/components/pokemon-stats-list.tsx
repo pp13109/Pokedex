@@ -34,7 +34,12 @@ const itemVariants = {
   },
 };
 
-export function PokemonStatsList({ stats, statlimit, statLimitTotal, bestStatBaseName }: PokemonStatsListProps) {
+export function PokemonStatsList({
+  stats,
+  statlimit,
+  statLimitTotal,
+  bestStatBaseName,
+}: PokemonStatsListProps) {
   const gradientBestStat = "bg-gradient-to-r from-sky-800 to-sky-500";
   const gradientTotal = "bg-gradient-to-r from-emerald-800 to-emerald-500";
   const gradientNormal = "bg-gradient-to-r from-zinc-500 to-zinc-200";
@@ -76,11 +81,7 @@ export function PokemonStatsList({ stats, statlimit, statLimitTotal, bestStatBas
         </motion.li>
       ))}
 
-      <motion.li
-        key="totalStats"
-        variants={itemVariants}
-        className="space-y-1"
-      >
+      <motion.li key="totalStats" variants={itemVariants} className="space-y-1">
         <div className="flex items-center justify-between text-sm">
           <span className="text-zinc-300">Total</span>
           <span className="text-zinc-500">{stats.totalStats}</span>

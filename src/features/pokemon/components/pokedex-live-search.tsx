@@ -100,20 +100,20 @@ export function PokedexLiveSearch({ initialQuery }: PokedexLiveSearchProps) {
 
       {initialQuery && (
         <motion.button
-        id="search_clear_button"
-        layout
-        initial={{
-          opacity: 0,
-          y: 5
-        }}
-        animate={{
-          opacity: 1,
-          y: 0
-        }}
-        transition={{
-          duration: 0.3,
-          ease: "easeIn"
-        }}
+          id="search_clear_button"
+          layout
+          initial={{
+            opacity: 0,
+            y: 5,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.3,
+            ease: "easeIn",
+          }}
           type="button"
           onClick={handleClear}
           className="cursor-pointer text-zinc-300 hover:text-zinc-500 active:text-zinc-400"

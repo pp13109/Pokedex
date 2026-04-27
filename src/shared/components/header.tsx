@@ -33,7 +33,7 @@ export default function Header() {
           className="group inline-flex items-center gap-2 transition-transform duration-300 hover:scale-105"
         >
           <Image
-            src="/icons/premierball.svg"
+            src="/icons/pokeball.svg"
             alt="Pokeball"
             width={24}
             height={24}
